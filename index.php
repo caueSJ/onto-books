@@ -29,7 +29,7 @@
 
 <body id="page-top" data-spy="scroll" data-target="#mainNav">
     <div class="ui fullscreen basic modal base-modal-fullscreen  "></div>
-    
+
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div class="container">

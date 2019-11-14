@@ -22,7 +22,7 @@ html {
 }
 
 .error-input{
-  background-color: #ffc9d5 !important;    
+  background-color: #ffc9d5 !important;
 }
 
 .direita{
@@ -49,12 +49,13 @@ html {
 .titulo_gerencia{
   text-align: center;
   color:white;
-  margin-top: 80px;
+  font-weight: bold;
+  padding-top: 80px;
 }
 
 .extra_buscar_button{
   right: 10px !important;
-  bottom: 100px !important;  
+  bottom: 100px !important;
   position: fixed !important;
 }
 
@@ -102,15 +103,15 @@ html {
   border-radius: 0,.25rem,.25rem,0 !important;
   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s !important;
 }
-.ui.card>.extra, .ui.cards>.card>.extra{  
-  background-color: white !important; 
+.ui.card>.extra, .ui.cards>.card>.extra{
+  background-color: white !important;
 }
-.ui.card>.content, .ui.cards>.card>.content{  
-  background-color: white !important; 
+.ui.card>.content, .ui.cards>.card>.content{
+  background-color: white !important;
 }
 .ui.card, .ui.cards>.card{
   width: 14.500em !important;
-  height: 32.5em !important;  
+  height: 32.5em !important;
 }
 .fixed_item{
   position: fixed;
@@ -846,9 +847,6 @@ body {
 }
 .gerencia_menu_container{
   border-top: 2px solid transparent;
-  width: 7vw;
-  height: 7vw;
-  padding-top: 5px;
 }
 .gerencia_menu_container:hover{
   border: 1px solid #F05F40;
@@ -862,11 +860,11 @@ h1.divider{
   height: auto;
   border-right: 1px solid #ADAAAD;
   border-left: 1px solid #ADAAAD;
-  
+
 
 }
 
-.ic-search-wrapper .icon-search-container.active .fa-search {  
+.ic-search-wrapper .icon-search-container.active .fa-search {
   -moz-transform: scaleX(-1);
   -o-transform: scaleX(-1);
   -webkit-transform: scaleX(-1);

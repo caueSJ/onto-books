@@ -149,7 +149,7 @@
 
 	<script src ="assets/plugins/jquery3.1.1.js"></script>
 	<script src ="assets/plugins/tether/dist/js/tether.min.js"></script>
-	<script src ="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src ="vendor/bootstrap/js/bootstrap.min.js"></script>
 	<script src ="assets/plugins/pace.js"></script>
 	<script src ="assets/plugins/jquery.cookie.js"></script>
 	<script src ="assets/plugins/replaceSpecialChars.js"></script>

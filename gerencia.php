@@ -10,6 +10,9 @@
     <meta name="author" content="Pedro Mazarini & Cauê Jesus">
     <title>Onto Books</title>
 
+    <!-- Fontes -->
+    <link href='assets/css/fontes.css' rel='stylesheet' type='text/css'>
+
     <link href="assets/plugins/SemanticAlerts/Semantic-UI-Alert.css" rel="stylesheet">
     <link href="assets/plugins/Semantic/semantic.min.css" rel="stylesheet">
 
@@ -18,16 +21,12 @@
     <link rel="shortcut icon" href="assets/img/if_book.png">
 
     <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <!-- Baixar essas fontes -->
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href="vendor/font-awesome/css/all.css" rel="stylesheet" type="text/css">
 
     <!-- Plugin CSS -->
     <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <!--<link href="css/creative.min.css" rel="stylesheet">-->
     <link href="assets/css/creative.css" rel="stylesheet">
 </head>
 
@@ -78,73 +77,54 @@
             <div class="header-content-inner">
                 <h1 id="homeHeading">Gerenciar Buscador</h1>
 
+                <div class="container-fluid mt-5">
+                    <div class="row">
+                        <div class="col">
+                            <a class="nav-link js-scroll-trigger edicao_gerencia" data-controller="livros_gerencia" href="#edicao" style="color: white;">
+                                <div class="gerencia_menu_container">
+                                    <i class="huge icon book" aria-hidden="true"></i>
+                                    <div class="header huge" >Livros</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a class="nav-link js-scroll-trigger edicao_gerencia" data-controller="autores_gerencia" href="#edicao" style="color: white;">
+                                <div class="gerencia_menu_container">
+                                    <i class="write huge icon ui"></i>
+                                    <div class="header huge" >Autores</div>
+                                </div> 
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a class="nav-link js-scroll-trigger edicao_gerencia" data-controller="areas_gerencia" href="#edicao" style="color: white;">
+                                <div class="gerencia_menu_container">
+                                    <i class="bookmark huge icon ui"></i>
+                                    <div class="header huge" >Áreas</div>
+                                </div> 
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a class="nav-link js-scroll-trigger edicao_gerencia" data-controller="termos_gerencia" href="#edicao" style="color: white;">
+                                <div class="gerencia_menu_container">
+                                    <i class="sort alphabet huge ascending icon"></i>
+                                    <div class="header huge" >Termos</div>
+                                </div> 
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a class="nav-link js-scroll-trigger edicao_gerencia" data-controller="usuarios_gerencia" href="#edicao" style="color: white;">
+                                <div class="gerencia_menu_container">
+                                    <i class="user huge icon ui"></i>
+                                    <div class="header huge" >Usuários</div>
+                                </div> 
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="ui  stackable relaxed grid" style="margin-top: 10px;">
-                    <div class="column four wide">
-                        <a class="nav-link js-scroll-trigger edicao_gerencia" data-controller="livros_gerencia" href="#edicao" style="color: white;">
-                            <div class="gerencia_menu_container">
-                                <i class="huge icon book" aria-hidden="true"></i>
-                                <div class="header huge" >Livros</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="column four wide">
-                        <a class="nav-link js-scroll-trigger edicao_gerencia" data-controller="autores_gerencia" href="#edicao" style="color: white;">
-                            <div class="gerencia_menu_container">
-                                <i class="write huge icon ui"></i>
-                                <div class="header huge" >Autores</div>
-                            </div> 
-                        </a>
-                    </div>
-                    <div class="column four wide">
-                        <a class="nav-link js-scroll-trigger edicao_gerencia" data-controller="editoras_gerencia" href="#edicao" style="color: white;">
-                            <div class="gerencia_menu_container">
-                                <i class="building huge icon ui"></i>
-                                <div class="header huge" >Editoras</div>
-                            </div> 
-                        </a>
-                    </div>
-                    <div class="column four wide">
-                        <a class="nav-link js-scroll-trigger edicao_gerencia" data-controller="areas_gerencia" href="#edicao" style="color: white;">
-                            <div class="gerencia_menu_container">
-                                <i class="bookmark huge icon ui"></i>
-                                <div class="header huge" >Áreas</div>
-                            </div> 
-                        </a>
-                    </div>
                 </div>      
                 <div class="ui stackable relaxed grid" style="margin-top: 10px;">
-                    <div class="column four wide">
-                        <a class="nav-link js-scroll-trigger edicao_gerencia" data-controller="termos_gerencia" href="#edicao" style="color: white;">
-                            <div class="gerencia_menu_container">
-                                <i class="sort alphabet huge ascending icon"></i>
-                                <div class="header huge" >Termos</div>
-                            </div> 
-                        </a>
-                    </div>
-                    <div class="column four wide">
-                        <a class="nav-link js-scroll-trigger edicao_gerencia" data-controller="termos_livros_gerencia" href="#edicao" style="color: white;">
-                            <div class="gerencia_menu_container">
-                                <i class="huge icon exchange" aria-hidden="true"></i>
-                                <div class="header huge" >Livros & Termos</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="column four wide">
-                        <a class="nav-link js-scroll-trigger edicao_gerencia" data-controller="locais_gerencia" href="#edicao" style="color: white;">
-                            <div class="gerencia_menu_container">
-                                <i class="pin map huge icon ui"></i>
-                                <div class="header huge huge" >Locais</div>
-                            </div> 
-                        </a>
-                    </div>
-                    <div class="column four wide">
-                        <a class="nav-link js-scroll-trigger edicao_gerencia" data-controller="usuarios_gerencia" href="#edicao" style="color: white;">
-                            <div class="gerencia_menu_container">
-                                <i class="user huge icon ui"></i>
-                                <div class="header huge" >Usuários</div>
-                            </div> 
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>

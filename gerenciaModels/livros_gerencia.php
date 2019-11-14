@@ -12,44 +12,44 @@ $controller ='livros_gerencia';
 ?>
 <h1 class="titulo_gerencia">Livros</h1>
 
-<div class="ui styled sixteen fluid wide accordion novo_gerencia " >
+<!-- <div class="ui styled sixteen fluid wide accordion novo_gerencia">
     <div class=" title">
         <i class="dropdown icon"></i>
-        <i class="add green icon"></i>Novo 
+        <i class="add green icon"></i>Novo
     </div>
-    <div class=" content">
-        <div class="ui mini form form-gerencia-<? echo $controller ?>">            
+    <div class="content">
+        <div class="ui mini form form-gerencia-<? echo $controller ?>">
             <h4 class="ui dividing header titulo_edicao_gerencia"><i class="book  icon"></i>Editar Livro</h4>
-            <div class="ui stackable fields grid sixteen wide   form-save-gerencia"> 
+            <div class="ui stackable fields grid sixteen wide   form-save-gerencia">
                 <input type="hidden"  class="id_item_gerencia">
                 <div class="ui column eight wide">
-                    <div class="ui stackable fields grid sixteen wide   ">    
-                        <div class="ui field sixteen wide  mini ">                                        
+                    <div class="ui stackable fields grid sixteen wide">
+                        <div class="ui field sixteen wide  mini ">
                             <div class=" sixteen wide  ui input labeled indice-1" data-indice = "1" tabindex="4">
                                 <div class='ui label ontobooks_color grande'>Título</div>
                                 <input class="ui sixteen wide labeled <? echo $controller ?>-titulo" placeholder="Título" data-required='required' name="titulo" type="text" value="">
                             </div>
-                        </div>              
+                        </div>
                     </div>
-                    <div class="ui stackable fields grid sixteen wide   ">                    
-                        <div class="ui field eight wide  mini ">                                        
+                    <div class="ui stackable fields grid sixteen wide   ">
+                        <div class="ui field eight wide  mini ">
                             <div class=" sixteen wide  ui input labeled indice-1" data-indice = "1" tabindex="4">
                                 <div class='ui label ontobooks_color grande'>Nº de Páginas</div>
                                 <input class="ui sixteen wide labeled <? echo $controller ?>-paginas" data-required='required' placeholder="Nº de Páginas"  name="paginas" type="number" value="">
                             </div>
                         </div>
-                        <div class="ui field eight wide  mini ">                                        
+                        <div class="ui field eight wide  mini ">
                             <div class=" sixteen wide  ui input labeled " tabindex="4">
                                 <div class='ui label ontobooks_color grande'>Edição</div>
                                 <input class="ui sixteen wide labeled <? echo $controller ?>-edicao" data-required='required' placeholder="Edição"  name="edicao" type="number" value="">
                             </div>
                         </div>
                     </div>
-                    <div class="ui stackable fields grid sixteen wide  ">                    
+                    <div class="ui stackable fields grid sixteen wide  ">
                         <div class="eight wide field  ui input labeled indice-1"  data-indice = "1">
                             <div class='ui label ontobooks_color grande'>Autor</div>
                             <div class="ui fluid search selection dropdown  labeled <? echo $controller ?>-autor indice-1" tabindex="0" data-controller = "<? echo $controller ?>" data-indice="1">
-                                <input type="hidden" data-required="required" tabindex="1" name="id_autor"> 
+                                <input type="hidden" data-required="required" tabindex="1" name="id_autor">
                                 <i class="dropdown icon"></i>
                                 <div class="default text">Selecione o Autor</div>
                                 <div  style="width: 400px !important; padding-bottom: 5px;" class="menu form-autor-<? echo $controller ?> indice-1" data-controller = "<? echo $controller ?>">
@@ -59,19 +59,19 @@ $controller ='livros_gerencia';
                         <div class="eight wide field  ui input labeled indice-1"  data-indice = "1">
                             <div class='ui label ontobooks_color grande'>Editora</div>
                             <div class="ui fluid search selection dropdown  labeled <? echo $controller ?>-editora indice-1" tabindex="0" data-controller = "<? echo $controller ?>" data-indice="1">
-                                <input type="hidden" data-required="required" tabindex="1" name="id_editora"> 
+                                <input type="hidden" data-required="required" tabindex="1" name="id_editora">
                                 <i class="dropdown icon"></i>
                                 <div class="default text">Selecione a Editora</div>
                                 <div  style="width: 400px !important; padding-bottom: 5px;" class="menu form-editora-<? echo $controller ?> indice-1" data-controller = "<? echo $controller ?>">
                                 </div>
                             </div>
                         </div>
-                    </div>  
-                    <div class="ui stackable fields grid sixteen wide  ">                    
+                    </div>
+                    <div class="ui stackable fields grid sixteen wide  ">
                         <div class="eight wide field  ui input labeled indice-1"  data-indice = "1">
                             <div class='ui label ontobooks_color grande'>Área</div>
                             <div class="ui fluid search selection dropdown  labeled <? echo $controller ?>-area indice-1" tabindex="0" data-controller = "<? echo $controller ?>" data-indice="1">
-                                <input type="hidden" data-required="required" tabindex="1" name="id_area"> 
+                                <input type="hidden" data-required="required" tabindex="1" name="id_area">
                                 <i class="dropdown icon"></i>
                                 <div class="default text">Selecione a Área</div>
                                 <div  style="width: 400px !important; padding-bottom: 5px;" class="menu form-area-<? echo $controller ?> indice-1" data-controller = "<? echo $controller ?>">
@@ -81,14 +81,14 @@ $controller ='livros_gerencia';
                         <div class="eight wide field  ui input labeled indice-1"  data-indice = "1">
                             <div class='ui label ontobooks_color grande'>Local</div>
                             <div class="ui fluid search selection dropdown  labeled <? echo $controller ?>-local indice-1" tabindex="0" data-controller = "<? echo $controller ?>" data-indice="1">
-                                <input type="hidden" data-required="required" tabindex="1" name="id_local"> 
+                                <input type="hidden" data-required="required" tabindex="1" name="id_local">
                                 <i class="dropdown icon"></i>
                                 <div class="default text">Selecione o Local</div>
                                 <div  style="width: 400px !important; padding-bottom: 5px;" class="menu form-local-<? echo $controller ?> indice-1" data-controller = "<? echo $controller ?>">
                                 </div>
                             </div>
                         </div>
-                    </div>  
+                    </div>
                 </div>
                 <div class="ui column eight wide centered" >
                     <div class="sixteen wide field  ui centered " style="text-align: center;"  data-indice = "1">
@@ -98,23 +98,23 @@ $controller ='livros_gerencia';
                     <div class="sixteen wide field  ui centered " style="text-align: center; margin-top: 10px;"  data-indice = "1">
                         <div class="column one wide"  >
                             <label for="capa_livro_input"
-                                   class="ui grande ontobooks_color label  label_anexo_default" > <i class="attach icon"></i> Anexar Capa</label >                                                                                                            
+                                   class="ui grande ontobooks_color label  label_anexo_default" > <i class="attach icon"></i> Anexar Capa</label >
                             <label style="background-color: red !important;" class="ui grande ontobooks_color label hidden_content  label_remove_anexo_default" >
-                                <i class="remove circle icon"></i> Remover</label >                                                                                                            
+                                <i class="remove circle icon"></i> Remover</label >
                         </div>
                         <div class="column three wide " style="margin-left:2em; " >
-                            <div  style="position: absolute !important;">                        
-                                <input accept=".jpg" type="file" class="default_anexo <? echo $controller ?>_capa_anexo"  style="display:none;"  id="capa_livro_input">                    
+                            <div  style="position: absolute !important;">
+                                <input accept=".jpg" type="file" class="default_anexo <? echo $controller ?>_capa_anexo"  style="display:none;"  id="capa_livro_input">
                             </div>
-                        </div>      
-                    </div>                   
-                </div>                 
-            </div>            
-        </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <button class="ui red direita cancela_save_gerencia button" data-controller='<?echo $controller?>' form-name='form-save-gerencia'>Cancelar</button>
-        <button class="ui green direita save_gerencia button" data-controller='<?echo $controller?>' form-name='form-save-gerencia'>Salvar</button>        
+        <button class="ui green direita save_gerencia button" data-controller='<?echo $controller?>' form-name='form-save-gerencia'>Salvar</button>
     </div>
-</div>
+</div> -->
 
 <table id="lista_gerencia" class="ui padded table" >
     <thead>
