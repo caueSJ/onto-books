@@ -349,5 +349,6 @@ MigrationBackup/
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
 
-# Ignorar a pasta de logs
+# Ignorar pastas do sistema
 queryLogs/
+.vscode/
