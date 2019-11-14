@@ -1,0 +1,43 @@
+----------------------------------------------
+11:42 |
+          Query: PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#>
+                 SELECT ?Livro
+                  WHERE {
+                    { ?Livro book:RelacionamentoForte  book:php.   }  UNION { ?Livro book:RelacionamentoMedio  book:php.   }  UNION { ?Livro book:RelacionamentoFraco  book:php.   } 
+                  }
+----------------------------------------------
+15:53 |
+          Query: forte :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#>
+                 SELECT  ?termo  where{
+                    {book:30 book:RelacionamentoForte ?termo.}}
+ medio :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#>
+                 SELECT  ?termo  where{
+                    {book:30 book:RelacionamentoMedio ?termo.}}
+ fraco :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#>
+                 SELECT  ?termo  where{
+                    {book:30 book:RelacionamentoFraco ?termo.}}
+----------------------------------------------
+16:07 |
+          Query: forte :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#>
+                 SELECT  ?termo  where{
+                    {book:30 book:RelacionamentoForte ?termo.}}
+ medio :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#>
+                 SELECT  ?termo  where{
+                    {book:30 book:RelacionamentoMedio ?termo.}}
+ fraco :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#>
+                 SELECT  ?termo  where{
+                    {book:30 book:RelacionamentoFraco ?termo.}}
+----------------------------------------------
+16:11 |
+          Query: PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#>
+                 SELECT ?Livro
+                  WHERE {
+                    { ?Livro book:RelacionamentoForte  book:php.   }  UNION { ?Livro book:RelacionamentoMedio  book:php.   }  UNION { ?Livro book:RelacionamentoFraco  book:php.   } 
+                  }
+----------------------------------------------
+16:19 |
+          Query: PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#>
+                 SELECT ?Livro
+                  WHERE {
+                    { ?Livro book:RelacionamentoForte  book:redes.   }  UNION { ?Livro book:RelacionamentoMedio  book:redes.   }  UNION { ?Livro book:RelacionamentoFraco  book:redes.   } 
+                  }

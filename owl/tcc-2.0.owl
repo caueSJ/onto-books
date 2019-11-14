@@ -1,0 +1,656 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="urn:absolute:/2017/5/tcc-1.0.0#"
+     xml:base="urn:absolute:/2017/5/tcc-1.0.0"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:tcc-2="urn:absolute:/2017/5/tcc-2.0.0#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:tcc-1="urn:absolute:/2017/5/tcc-1.0.0#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="urn:absolute:/2017/5/tcc-2.0.0"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#RelacionamentoForte -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:/2017/5/tcc-2.0.0#RelacionamentoForte">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Livro"/>
+        <rdfs:range rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Termos"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#RelacionamentoMedio -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:/2017/5/tcc-2.0.0#RelacionamentoMedio">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Livro"/>
+        <rdfs:range rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Termos"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#cita -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:/2017/5/tcc-2.0.0#cita">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Livro"/>
+        <rdfs:range rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Termos"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#focadoEm -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:/2017/5/tcc-2.0.0#focadoEm">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#focadoPor"/>
+        <rdfs:domain rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Livro"/>
+        <rdfs:range rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Termos"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#focadoPor -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:/2017/5/tcc-2.0.0#focadoPor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Termos"/>
+        <rdfs:range rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Livro"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#pertence -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:/2017/5/tcc-2.0.0#pertence"/>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#sobre -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:/2017/5/tcc-2.0.0#sobre">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Livro"/>
+        <rdfs:range rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Termos"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#autor -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:/2017/5/tcc-2.0.0#autor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Livro"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#classe_gramatical -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:/2017/5/tcc-2.0.0#classe_gramatical">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Termos"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#edicao -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:/2017/5/tcc-2.0.0#edicao">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Livro"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#editora -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:/2017/5/tcc-2.0.0#editora">
+        <rdfs:domain rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Livro"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#geracao -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:/2017/5/tcc-2.0.0#geracao">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Caracteristicas_de_Linguagens"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>1ª</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>2ª</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>3ª</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>4ª</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first>5ª</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#isbn -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:/2017/5/tcc-2.0.0#isbn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Livro"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#nivel -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:/2017/5/tcc-2.0.0#nivel">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Caracteristicas_de_Linguagens"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>Alto</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Baixo</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>Médio</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#paradigma -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:/2017/5/tcc-2.0.0#paradigma">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Caracteristicas_de_Linguagens"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>Concorrente</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Funcional</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>Imperativo</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>Lógico</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first>Orientado a dados</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first>Orientado a objetos</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#termo -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:/2017/5/tcc-2.0.0#termo">
+        <rdfs:domain rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Termos"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#titulo -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:/2017/5/tcc-2.0.0#titulo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Livro"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#Alto_Nivel -->
+
+    <owl:Class rdf:about="urn:absolute:/2017/5/tcc-2.0.0#Alto_Nivel">
+        <rdfs:subClassOf rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Caracteristicas_de_Linguagens"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#Baixo_Nivel -->
+
+    <owl:Class rdf:about="urn:absolute:/2017/5/tcc-2.0.0#Baixo_Nivel">
+        <rdfs:subClassOf rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Caracteristicas_de_Linguagens"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#Caracteristicas_de_Linguagens -->
+
+    <owl:Class rdf:about="urn:absolute:/2017/5/tcc-2.0.0#Caracteristicas_de_Linguagens">
+        <owl:disjointWith rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Livro"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#Declarativas -->
+
+    <owl:Class rdf:about="urn:absolute:/2017/5/tcc-2.0.0#Declarativas">
+        <rdfs:subClassOf rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Quarta_Geracao"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#Estruturada -->
+
+    <owl:Class rdf:about="urn:absolute:/2017/5/tcc-2.0.0#Estruturada">
+        <rdfs:subClassOf rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Terceira_Geracao"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#Geradores_de_Aplicacao -->
+
+    <owl:Class rdf:about="urn:absolute:/2017/5/tcc-2.0.0#Geradores_de_Aplicacao">
+        <rdfs:subClassOf rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Quarta_Geracao"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#Geradores_de_Relatorios -->
+
+    <owl:Class rdf:about="urn:absolute:/2017/5/tcc-2.0.0#Geradores_de_Relatorios">
+        <rdfs:subClassOf rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Quarta_Geracao"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#Linguagens -->
+
+    <owl:Class rdf:about="urn:absolute:/2017/5/tcc-2.0.0#Linguagens"/>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#Livro -->
+
+    <owl:Class rdf:about="urn:absolute:/2017/5/tcc-2.0.0#Livro"/>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#Orientada_a_Objetos -->
+
+    <owl:Class rdf:about="urn:absolute:/2017/5/tcc-2.0.0#Orientada_a_Objetos">
+        <rdfs:subClassOf rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Terceira_Geracao"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#Primeira_Geracao -->
+
+    <owl:Class rdf:about="urn:absolute:/2017/5/tcc-2.0.0#Primeira_Geracao">
+        <rdfs:subClassOf rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Baixo_Nivel"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#Procedural -->
+
+    <owl:Class rdf:about="urn:absolute:/2017/5/tcc-2.0.0#Procedural">
+        <rdfs:subClassOf rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Estruturada"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#Quarta_Geracao -->
+
+    <owl:Class rdf:about="urn:absolute:/2017/5/tcc-2.0.0#Quarta_Geracao">
+        <rdfs:subClassOf rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Alto_Nivel"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#Query_Languages -->
+
+    <owl:Class rdf:about="urn:absolute:/2017/5/tcc-2.0.0#Query_Languages">
+        <rdfs:subClassOf rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Quarta_Geracao"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#Quinta_Geracao -->
+
+    <owl:Class rdf:about="urn:absolute:/2017/5/tcc-2.0.0#Quinta_Geracao">
+        <rdfs:subClassOf rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Alto_Nivel"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#Segunda_Geracao -->
+
+    <owl:Class rdf:about="urn:absolute:/2017/5/tcc-2.0.0#Segunda_Geracao">
+        <rdfs:subClassOf rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Baixo_Nivel"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#Terceira_Geracao -->
+
+    <owl:Class rdf:about="urn:absolute:/2017/5/tcc-2.0.0#Terceira_Geracao">
+        <rdfs:subClassOf rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Alto_Nivel"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#Termos -->
+
+    <owl:Class rdf:about="urn:absolute:/2017/5/tcc-2.0.0#Termos"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#C -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:/2017/5/tcc-2.0.0#C">
+        <rdf:type rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Procedural"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#Erlang -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:/2017/5/tcc-2.0.0#Erlang">
+        <rdf:type rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Declarativas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#Informer -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:/2017/5/tcc-2.0.0#Informer">
+        <rdf:type rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Geradores_de_Relatorios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#Java -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:/2017/5/tcc-2.0.0#Java">
+        <rdf:type rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Orientada_a_Objetos"/>
+        <rdf:type rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Procedural"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#pertence"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Orientada_a_Objetos"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#pertence"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Procedural"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#Python -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:/2017/5/tcc-2.0.0#Python">
+        <rdf:type rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Orientada_a_Objetos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#Ruby -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:/2017/5/tcc-2.0.0#Ruby">
+        <rdf:type rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Orientada_a_Objetos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#SPARQL -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:/2017/5/tcc-2.0.0#SPARQL">
+        <rdf:type rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Query_Languages"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#SQL -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:/2017/5/tcc-2.0.0#SQL">
+        <rdf:type rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Query_Languages"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#Shoutem -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:/2017/5/tcc-2.0.0#Shoutem">
+        <rdf:type rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Geradores_de_Aplicacao"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#Subst1 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:/2017/5/tcc-2.0.0#Subst1">
+        <tcc-2:termo>Java</tcc-2:termo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#Subst2 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:/2017/5/tcc-2.0.0#Subst2">
+        <tcc-2:termo>C</tcc-2:termo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#Subst3 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:/2017/5/tcc-2.0.0#Subst3">
+        <tcc-2:termo>PHP</tcc-2:termo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#Swiftic -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:/2017/5/tcc-2.0.0#Swiftic">
+        <rdf:type rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Geradores_de_Aplicacao"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#Wdesk -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:/2017/5/tcc-2.0.0#Wdesk">
+        <rdf:type rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Geradores_de_Relatorios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#and -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:/2017/5/tcc-2.0.0#and">
+        <rdf:type rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Termos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#c -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:/2017/5/tcc-2.0.0#c">
+        <rdf:type rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Termos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#library -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:/2017/5/tcc-2.0.0#library">
+        <rdf:type rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Termos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#4 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:/2017/5/tcc-2.0.0#4">
+        <rdf:type rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Livro"/>
+        <tcc-2:RelacionamentoForte rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#and"/>
+        <tcc-2:RelacionamentoForte rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#c"/>
+        <tcc-2:RelacionamentoMedio rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#library"/>
+        <tcc-2:titulo>C programming a modern aproach</tcc-2:titulo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:/2017/5/tcc-2.0.0#C++ -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:/2017/5/tcc-2.0.0#C++">
+        <rdf:type rdf:resource="urn:absolute:/2017/5/tcc-2.0.0#Orientada_a_Objetos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="urn:absolute:/2017/5/tcc-2.0.0#autor"/>
+            <rdf:Description rdf:about="urn:absolute:/2017/5/tcc-2.0.0#classe_gramatical"/>
+            <rdf:Description rdf:about="urn:absolute:/2017/5/tcc-2.0.0#edicao"/>
+            <rdf:Description rdf:about="urn:absolute:/2017/5/tcc-2.0.0#editora"/>
+            <rdf:Description rdf:about="urn:absolute:/2017/5/tcc-2.0.0#geracao"/>
+            <rdf:Description rdf:about="urn:absolute:/2017/5/tcc-2.0.0#isbn"/>
+            <rdf:Description rdf:about="urn:absolute:/2017/5/tcc-2.0.0#nivel"/>
+            <rdf:Description rdf:about="urn:absolute:/2017/5/tcc-2.0.0#paradigma"/>
+            <rdf:Description rdf:about="urn:absolute:/2017/5/tcc-2.0.0#termo"/>
+            <rdf:Description rdf:about="urn:absolute:/2017/5/tcc-2.0.0#titulo"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

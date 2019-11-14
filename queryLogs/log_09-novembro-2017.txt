@@ -1,0 +1,21 @@
+----------------------------------------------
+19:31 |
+          Query: PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#>
+                 SELECT ?Livro 
+                  WHERE {
+                    { ?Livro book:RelacionamentoForte  book:aqndroid.   }  UNION { ?Livro book:RelacionamentoMedio  book:aqndroid.   }  UNION { ?Livro book:RelacionamentoFraco  book:aqndroid.   } 
+                  }
+----------------------------------------------
+19:31 |
+          Query: PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#>
+                 SELECT ?Livro 
+                  WHERE {
+                    { ?Livro book:RelacionamentoForte  book:android.   }  UNION { ?Livro book:RelacionamentoMedio  book:android.   }  UNION { ?Livro book:RelacionamentoFraco  book:android.   } 
+                  }
+----------------------------------------------
+19:34 |
+          Query: PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#>
+                 SELECT ?Livro 
+                  WHERE {
+                    { ?Livro book:RelacionamentoForte  book:mobile.   }  UNION { ?Livro book:RelacionamentoMedio  book:mobile.   }  UNION { ?Livro book:RelacionamentoFraco  book:mobile.   } 
+                  }

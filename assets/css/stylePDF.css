@@ -1,0 +1,424 @@
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+a {
+  color: #5D6975;
+  text-decoration: underline;
+}
+
+.codigo_barra{
+  float: right;
+}
+
+.titulo-relatorio{
+  text-align: center;
+  font-size: 14;
+}
+
+.cabecalho{
+  background-color: #F5F5F5;
+}
+
+.cabecalho-data{
+  width: 33%;
+  font-size: 12;  
+  float: left;
+  text-align:  center;
+}
+.cabecalho-localidade{
+  width: 33%;
+  font-size: 12;  
+  float: right;
+  text-align: center;
+}
+.cabecalho-confiabilidade{
+  width: 33%;
+  font-size: 12;
+  float: right;
+  text-align: center;
+}
+
+.tombamento-inst{
+  width: 200px;
+  height: 35px;
+}
+
+.tomb-inst-data{
+  margin-top: 20px;
+  width: 33%;
+  float: left;
+}
+
+.tombamento-ret{
+  width: 200px;
+  height: 35px;
+}
+
+.tomb-ret-data{
+  width: 33%;
+  float: left;
+}
+
+.equipamento-data{
+  width: 33%; 
+}
+
+.table-tipo-equipamentos{
+  width: 100%;
+}
+
+.equipe-data{
+  width: 60%;
+  margin-top: 20px;
+}
+
+.table-equipe-elektro{
+  width: 100%;
+
+}
+
+.table-equipe-elektro, .table-tipo-equipamentos, .table-tomb-inst, .table-tomb-ret, .table-km{
+  border-collapse: collapse;
+}
+
+.table-equipe-elektro td th, .table-tipo-equipamentos td th, .table-tomb-inst td th, .table-tomb-ret td th, .table-km td th {
+    border: 1px solid black;
+}
+
+.table-historico{
+  width: 100%;
+  border-collapse: collapse;
+  border-left: none  !important;
+  border-right: none  !important;
+}
+
+.table-historico td th{
+  border-bottom: 1px solid black;
+}
+
+.historico-linha{  
+  width: 100%;
+  height: 25px;
+}
+
+.equipe-elektro{
+  text-align: left;
+  padding: 10px;
+}
+
+.qtd-real{
+  width: 100px;
+  height: 30px;
+}
+
+.qtd-equipamento{
+  width: 50px;
+  height: 30px;
+  text-align: center;
+}
+
+.km-data{
+  margin-top: 13px;
+  float: right;
+}
+.km{
+  width: 100px;
+  height: 30px;
+}
+
+.table-responsavel{
+  width: 100%;
+  height: 100%;
+}
+
+.table-responsavel tr{  
+  height: 20px;
+}
+
+.responsavel{
+  width: 100%;
+  margin-top: 20px;  
+}
+
+.responsavel-esquerda{
+  width: 50%;
+  margin-top: 5px;   
+  float: left;
+}
+
+.responsavel-direita{
+  float: right;
+  width: 50%;  
+  text-align: right;
+}
+
+.date-data{
+  height: 40px;
+  text-align: right;
+}
+
+.assinaturaresponsavel{
+  border: 1px solid  #5D6975;
+  width: 300px;
+}
+
+
+
+body {
+  position: relative;
+  width: 21cm;  
+  height: 29.7cm; 
+  margin: 0 auto; 
+  color: #001028;
+  background: #FFFFFF; 
+  font-family: Arial, sans-serif; 
+  font-size: 11px; 
+  font-family: Arial;
+}
+
+header {
+  margin-bottom: 10px;
+}
+
+#logo {
+  text-align: left;
+   margin: 20px 0px 20px 0;
+}
+
+#logo img {  
+  width: 90px;
+
+}
+
+.divisor{
+  border-bottom: 1px solid  #5D6975;
+}
+
+h1 {
+  border-top: 1px solid  #5D6975;
+  border-bottom: 1px solid  #5D6975;
+  color: #5D6975;
+  font-size: 2.0em;
+  line-height: 1.4em;
+  font-weight: normal;
+  text-align: center;
+  margin: 0 0 20px 0;
+  background: url(dimension.png);
+}
+
+#project {
+  float: left;
+}
+
+.solicitado{
+  padding-right: 20px;
+}
+
+#project span {
+  color: #5D6975;
+  text-align: left;
+  width: 52px;
+  margin-right: 10px;
+  display: inline-block;
+  font-size: 0.8em;
+}
+.conteudo{
+  margin: 150px;
+}
+
+
+
+#project div,
+#formDireita div {
+  white-space: nowrap;        
+}
+
+td.title{
+  text-align: left;
+}
+
+table.servicos {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.desc_servico{
+  float: left;
+  margin-left: 5px;
+}
+
+.equipamento{  
+  margin: 2px 0px 0px 5px;
+  clear: both;
+  font-size: 1.2em;
+}
+
+.desc_equipamento{  
+  margin: 5px 0px 0px 5px;
+  float: left;
+
+}
+
+.desc_colaborador{  
+  margin: 5px 0px 0px 5px;
+  float: left;
+
+}
+
+.equipes{
+  clear: both;
+  margin-top: 10px;
+}
+
+.hoteis{
+  clear: both;
+  margin-top: 10px;
+}
+.desc_hotel{  
+  margin: 5px 0px 0px 5px;
+  float: left;
+}
+.hotel{  
+  clear: both;
+}
+
+.observacoes{
+  clear: both;
+  margin-top: 30px;
+  position: absolute;
+}
+
+.obs{  
+  clear: both;
+  background: #F5F5F5;
+  text-align: justify;
+}
+
+strong{
+  color: #48887b;
+}
+
+.equipamento_descricao:nth-child(2n-1){
+ 
+}
+
+.colaborador:nth-child(2n-1){
+  background: #555986;
+}
+
+.colaborador{  
+  clear: both;
+}
+
+
+
+.expedido{
+  clear: both;
+  position: absolute;
+  margin-top:  80px;
+  margin-left: 5px;
+}
+
+.autorizado{
+  clear: both;
+  float: right;
+  margin-top: 61px;
+  margin-left: 5px;
+}
+
+.assinaturaautorizado{
+  border-bottom: 1px solid  #5D6975;
+  width: 300px;
+  float: right;
+}
+.assinaturaexpedido{
+  border-bottom: 1px solid  #5D6975;
+  width: 300px;
+}
+
+
+table.detalhe-servico {
+border:none;
+border-collapse: collapse;
+}
+
+
+
+table.detalhe-servico td {
+text-align: left;
+padding-right: 2rem;
+}
+
+table.detalhe-servico th {
+text-align: left;
+}
+
+
+
+
+
+.servicos_solicitados {  
+  margin-left: 5px;
+  border-radius:5px;
+  clear: both; 
+  white-space: nowrap; 
+}
+
+
+table.servicos tr:nth-child(2n-1) td {
+  
+}
+
+table.servicos th ,
+table.servicos td {  
+  text-align: center;
+}
+
+table.servicos th {
+  padding: 5px 20px;
+  color: #5D6975;
+  border-bottom: 1px solid #C1CED9;
+  white-space: nowrap;        
+  font-weight: normal;
+}
+
+table.servicos .service,
+table.servicos .desc {
+  text-align: left;
+}
+
+table.servicos td {
+  padding: 5px;
+  text-align: right;
+}
+
+table.servicos td.service,
+table.servicos td.desc {
+  vertical-align: top;
+}
+
+table.servicos td.unit,
+table.servicos td.qty,
+table.servicos td.total {
+  font-size: 1.0em;
+}
+
+table.servicos td.grand {
+  border-top: 1px solid #5D6975;;
+}
+
+#notices .notice {
+  color: #5D6975;
+  font-size: 1.0em;
+}
+
+footer {
+
+  position: relative;
+  bottom: 0;
+  margin: 5px;
+}

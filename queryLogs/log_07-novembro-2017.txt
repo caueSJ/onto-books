@@ -1,0 +1,238 @@
+----------------------------------------------
+20:03 |
+          Query: PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#>
+                 SELECT ?Livro 
+                  WHERE {
+                    { ?Livro book:RelacionamentoForte book:and.   }  UNION { ?Livro book:RelacionamentoMedio book:and.   }  UNION { ?Livro book:RelacionamentoFraco book:and.   } 
+                  }
+----------------------------------------------
+20:16 |
+          Query: forte :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:15 book:RelacionamentoForte ?termo.}}
+ medio :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:15 book:RelacionamentoMedio ?termo.}}
+ fraco :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:15 book:RelacionamentoFraco ?termo.}}
+----------------------------------------------
+20:19 |
+          Query: forte :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:1 book:RelacionamentoForte ?termo.}}
+ medio :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:1 book:RelacionamentoMedio ?termo.}}
+ fraco :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:1 book:RelacionamentoFraco ?termo.}}
+----------------------------------------------
+20:35 |
+          Query: PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#>
+                 SELECT ?Livro 
+                  WHERE {
+                    { ?Livro book:RelacionamentoForte book:library.   }  UNION { ?Livro book:RelacionamentoMedio book:library.   }  UNION { ?Livro book:RelacionamentoFraco book:library.   } 
+                  }
+----------------------------------------------
+20:35 |
+          Query: forte :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:4 book:RelacionamentoForte ?termo.}}
+ medio :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:4 book:RelacionamentoMedio ?termo.}}
+ fraco :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:4 book:RelacionamentoFraco ?termo.}}
+----------------------------------------------
+20:47 |
+          Query: PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#>
+                 SELECT ?Livro 
+                  WHERE {
+                    { ?Livro book:RelacionamentoForte  <urn:absolute:/2017/5/tcc-2.0.0#library>.   }  UNION { ?Livro book:RelacionamentoMedio  <urn:absolute:/2017/5/tcc-2.0.0#library>.   }  UNION { ?Livro book:RelacionamentoFraco  <urn:absolute:/2017/5/tcc-2.0.0#library>.   } 
+                  }
+----------------------------------------------
+20:48 |
+          Query: PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#>
+                 SELECT ?Livro 
+                  WHERE {
+                    { ?Livro <urn:absolute:/2017/5/tcc-2.0.0#RelacionamentoForte>  <urn:absolute:/2017/5/tcc-2.0.0#library>.   }  UNION { ?Livro <urn:absolute:/2017/5/tcc-2.0.0#RelacionamentoMedio>  <urn:absolute:/2017/5/tcc-2.0.0#library>.   }  UNION { ?Livro <urn:absolute:/2017/5/tcc-2.0.0#RelacionamentoFraco>  <urn:absolute:/2017/5/tcc-2.0.0#library>.   } 
+                  }
+----------------------------------------------
+20:51 |
+          Query: forte :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:1 book:RelacionamentoForte ?termo.}}
+ medio :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:1 book:RelacionamentoMedio ?termo.}}
+ fraco :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:1 book:RelacionamentoFraco ?termo.}}
+----------------------------------------------
+20:53 |
+          Query: PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#>
+                 SELECT ?Livro 
+                  WHERE {
+                    { ?Livro <urn:absolute:/2017/5/tcc-2.0.0#RelacionamentoForte>  <urn:absolute:/2017/5/tcc-2.0.0#and>.   }  UNION { ?Livro <urn:absolute:/2017/5/tcc-2.0.0#RelacionamentoMedio>  <urn:absolute:/2017/5/tcc-2.0.0#and>.   }  UNION { ?Livro <urn:absolute:/2017/5/tcc-2.0.0#RelacionamentoFraco>  <urn:absolute:/2017/5/tcc-2.0.0#and>.   } 
+                  }
+----------------------------------------------
+20:54 |
+          Query: forte :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:16 book:RelacionamentoForte ?termo.}}
+ medio :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:16 book:RelacionamentoMedio ?termo.}}
+ fraco :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:16 book:RelacionamentoFraco ?termo.}}
+----------------------------------------------
+20:54 |
+          Query: forte :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:16 book:RelacionamentoForte ?termo.}}
+ medio :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:16 book:RelacionamentoMedio ?termo.}}
+ fraco :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:16 book:RelacionamentoFraco ?termo.}}
+----------------------------------------------
+20:54 |
+          Query: PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#>
+                 SELECT ?Livro 
+                  WHERE {
+                    { ?Livro <urn:absolute:/2017/5/tcc-2.0.0#RelacionamentoForte>  <urn:absolute:/2017/5/tcc-2.0.0#arrays>.   }  UNION { ?Livro <urn:absolute:/2017/5/tcc-2.0.0#RelacionamentoMedio>  <urn:absolute:/2017/5/tcc-2.0.0#arrays>.   }  UNION { ?Livro <urn:absolute:/2017/5/tcc-2.0.0#RelacionamentoFraco>  <urn:absolute:/2017/5/tcc-2.0.0#arrays>.   } 
+                  }
+----------------------------------------------
+20:55 |
+          Query: forte :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:16 book:RelacionamentoForte ?termo.}}
+ medio :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:16 book:RelacionamentoMedio ?termo.}}
+ fraco :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:16 book:RelacionamentoFraco ?termo.}}
+----------------------------------------------
+20:56 |
+          Query: PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#>
+                 SELECT ?Livro 
+                  WHERE {
+                    { ?Livro book:RelacionamentoForte  book:arrays.   }  UNION { ?Livro book:RelacionamentoMedio  book:arrays.   }  UNION { ?Livro book:RelacionamentoFraco  book:arrays.   } 
+                  }
+----------------------------------------------
+20:57 |
+          Query: forte :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:16 book:RelacionamentoForte ?termo.}}
+ medio :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:16 book:RelacionamentoMedio ?termo.}}
+ fraco :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:16 book:RelacionamentoFraco ?termo.}}
+----------------------------------------------
+20:57 |
+          Query: forte :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:1 book:RelacionamentoForte ?termo.}}
+ medio :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:1 book:RelacionamentoMedio ?termo.}}
+ fraco :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:1 book:RelacionamentoFraco ?termo.}}
+----------------------------------------------
+20:58 |
+          Query: forte :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:18 book:RelacionamentoForte ?termo.}}
+ medio :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:18 book:RelacionamentoMedio ?termo.}}
+ fraco :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:18 book:RelacionamentoFraco ?termo.}}
+----------------------------------------------
+20:58 |
+          Query: forte :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:1 book:RelacionamentoForte ?termo.}}
+ medio :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:1 book:RelacionamentoMedio ?termo.}}
+ fraco :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:1 book:RelacionamentoFraco ?termo.}}
+----------------------------------------------
+20:58 |
+          Query: forte :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:18 book:RelacionamentoForte ?termo.}}
+ medio :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:18 book:RelacionamentoMedio ?termo.}}
+ fraco :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:18 book:RelacionamentoFraco ?termo.}}
+----------------------------------------------
+20:59 |
+          Query: forte :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:15 book:RelacionamentoForte ?termo.}}
+ medio :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:15 book:RelacionamentoMedio ?termo.}}
+ fraco :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:15 book:RelacionamentoFraco ?termo.}}
+----------------------------------------------
+20:59 |
+          Query: forte :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:18 book:RelacionamentoForte ?termo.}}
+ medio :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:18 book:RelacionamentoMedio ?termo.}}
+ fraco :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:18 book:RelacionamentoFraco ?termo.}}
+----------------------------------------------
+21:00 |
+          Query: PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#>
+                 SELECT ?Livro 
+                  WHERE {
+                    { ?Livro book:RelacionamentoForte  book:features.   }  UNION { ?Livro book:RelacionamentoMedio  book:features.   }  UNION { ?Livro book:RelacionamentoFraco  book:features.   } 
+                  }
+----------------------------------------------
+21:12 |
+          Query: PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#>
+                 SELECT ?Livro 
+                  WHERE {
+                    { ?Livro book:RelacionamentoForte  book:features.   }  UNION { ?Livro book:RelacionamentoMedio  book:features.   }  UNION { ?Livro book:RelacionamentoFraco  book:features.   } 
+                  }
+----------------------------------------------
+21:12 |
+          Query: PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#>
+                 SELECT ?Livro 
+                  WHERE {
+                    { ?Livro book:RelacionamentoForte  book:and.   }  UNION { ?Livro book:RelacionamentoMedio  book:and.   }  UNION { ?Livro book:RelacionamentoFraco  book:and.   } 
+                  }
+----------------------------------------------
+21:14 |
+          Query: PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#>
+                 SELECT ?Livro 
+                  WHERE {
+                    { ?Livro book:RelacionamentoForte  book:output.   }  UNION { ?Livro book:RelacionamentoMedio  book:output.   }  UNION { ?Livro book:RelacionamentoFraco  book:output.   } 
+                  }
+----------------------------------------------
+21:15 |
+          Query: PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#>
+                 SELECT ?Livro 
+                  WHERE {
+                    { ?Livro book:RelacionamentoForte  book:asd.   ?Livro book:RelacionamentoForte  book:da.   ?Livro book:RelacionamentoForte  book:sdfa.   }  UNION { ?Livro book:RelacionamentoForte  book:asd.   ?Livro book:RelacionamentoForte  book:da.   OPTIONAL {?Livro book:RelacionamentoForte book:sdfa }.  }  UNION { ?Livro book:RelacionamentoForte  book:asd.   ?Livro book:RelacionamentoForte  book:da.   ?Livro book:RelacionamentoMedio  book:sdfa.   }  UNION { ?Livro book:RelacionamentoForte  book:asd.   ?Livro book:RelacionamentoForte  book:da.   OPTIONAL {?Livro book:RelacionamentoMedio book:sdfa }.  }  UNION { ?Livro book:RelacionamentoForte  book:asd.   ?Livro book:RelacionamentoForte  book:da.   ?Livro book:RelacionamentoFraco  book:sdfa.   }  UNION { ?Livro book:RelacionamentoForte  book:asd.   ?Livro book:RelacionamentoForte  book:da.   OPTIONAL {?Livro book:RelacionamentoFraco book:sdfa }.  }  UNION { ?Livro book:RelacionamentoForte  book:asd.   OPTIONAL {?Livro book:RelacionamentoForte book:da }.  ?Livro book:RelacionamentoForte  book:sdfa.   }  UNION { ?Livro book:RelacionamentoForte  book:asd.   OPTIONAL {?Livro book:RelacionamentoForte book:da }.  OPTIONAL {?Livro book:RelacionamentoForte book:sdfa }.  }  UNION { ?Livro book:RelacionamentoForte  book:asd.   OPTIONAL {?Livro book:RelacionamentoForte book:da }.  ?Livro book:RelacionamentoMedio  book:sdfa.   }  UNION { ?Livro book:RelacionamentoForte  book:asd.   OPTIONAL {?Livro book:RelacionamentoForte book:da }.  OPTIONAL {?Livro book:RelacionamentoMedio book:sdfa }.  }  UNION { ?Livro book:RelacionamentoForte  book:asd.   OPTIONAL {?Livro book:RelacionamentoForte book:da }.  ?Livro book:RelacionamentoFraco  book:sdfa.   }  UNION { ?Livro book:RelacionamentoForte  book:asd.   OPTIONAL {?Livro book:RelacionamentoForte book:da }.  OPTIONAL {?Livro book:RelacionamentoFraco book:sdfa }.  }  UNION { ?Livro book:RelacionamentoForte  book:asd.   ?Livro book:RelacionamentoMedio  book:da.   ?Livro book:RelacionamentoForte  book:sdfa.   }  UNION { ?Livro book:RelacionamentoForte  book:asd.   ?Livro book:RelacionamentoMedio  book:da.   OPTIONAL {?Livro book:RelacionamentoForte book:sdfa }.  }  UNION { ?Livro book:RelacionamentoForte  book:asd.   ?Livro book:RelacionamentoMedio  book:da.   ?Livro book:RelacionamentoMedio  book:sdfa.   }  UNION { ?Livro book:RelacionamentoForte  book:asd.   ?Livro book:RelacionamentoMedio  book:da.   OPTIONAL {?Livro book:RelacionamentoMedio book:sdfa }.  }  UNION { ?Livro book:RelacionamentoForte  book:asd.   ?Livro book:RelacionamentoMedio  book:da.   ?Livro book:RelacionamentoFraco  book:sdfa.   }  UNION { ?Livro book:RelacionamentoForte  book:asd.   ?Livro book:RelacionamentoMedio  book:da.   OPTIONAL {?Livro book:RelacionamentoFraco book:sdfa }.  }  UNION { ?Livro book:RelacionamentoForte  book:asd.   OPTIONAL {?Livro book:RelacionamentoMedio book:da }.  ?Livro book:RelacionamentoForte  book:sdfa.   }  UNION { ?Livro book:RelacionamentoForte  book:asd.   OPTIONAL {?Livro book:RelacionamentoMedio book:da }.  OPTIONAL {?Livro book:RelacionamentoForte book:sdfa }.  }  UNION { ?Livro book:RelacionamentoForte  book:asd.   OPTIONAL {?Livro book:RelacionamentoMedio book:da }.  ?Livro book:RelacionamentoMedio  book:sdfa.   }  UNION { ?Livro book:RelacionamentoForte  book:asd.   OPTIONAL {?Livro book:RelacionamentoMedio book:da }.  OPTIONAL {?Livro book:RelacionamentoMedio book:sdfa }.  }  UNION { ?Livro book:RelacionamentoForte  book:asd.   OPTIONAL {?Livro book:RelacionamentoMedio book:da }.  ?Livro book:RelacionamentoFraco  book:sdfa.   }  UNION { ?Livro book:RelacionamentoForte  book:asd.   OPTIONAL {?Livro book:RelacionamentoMedio book:da }.  OPTIONAL {?Livro book:RelacionamentoFraco book:sdfa }.  }  UNION { ?Livro book:RelacionamentoForte  book:asd.   ?Livro book:RelacionamentoFraco  book:da.   ?Livro book:RelacionamentoForte  book:sdfa.   }  UNION { ?Livro book:RelacionamentoForte  book:asd.   ?Livro book:RelacionamentoFraco  book:da.   OPTIONAL {?Livro book:RelacionamentoForte book:sdfa }.  }  UNION { ?Livro book:RelacionamentoForte  book:asd.   ?Livro book:RelacionamentoFraco  book:da.   ?Livro book:RelacionamentoMedio  book:sdfa.   }  UNION { ?Livro book:RelacionamentoForte  book:asd.   ?Livro book:RelacionamentoFraco  book:da.   OPTIONAL {?Livro book:RelacionamentoMedio book:sdfa }.  }  UNION { ?Livro book:RelacionamentoForte  book:asd.   ?Livro book:RelacionamentoFraco  book:da.   ?Livro book:RelacionamentoFraco  book:sdfa.   }  UNION { ?Livro book:RelacionamentoForte  book:asd.   ?Livro book:RelacionamentoFraco  book:da.   OPTIONAL {?Livro book:RelacionamentoFraco book:sdfa }.  }  UNION { ?Livro book:RelacionamentoForte  book:asd.   OPTIONAL {?Livro book:RelacionamentoFraco book:da }.  ?Livro book:RelacionamentoForte  book:sdfa.   }  UNION { ?Livro book:RelacionamentoForte  book:asd.   OPTIONAL {?Livro book:RelacionamentoFraco book:da }.  OPTIONAL {?Livro book:RelacionamentoForte book:sdfa }.  }  UNION { ?Livro book:RelacionamentoForte  book:asd.   OPTIONAL {?Livro book:RelacionamentoFraco book:da }.  ?Livro book:RelacionamentoMedio  book:sdfa.   }  UNION { ?Livro book:RelacionamentoForte  book:asd.   OPTIONAL {?Livro book:RelacionamentoFraco book:da }.  OPTIONAL {?Livro book:RelacionamentoMedio book:sdfa }.  }  UNION { ?Livro book:RelacionamentoForte  book:asd.   OPTIONAL {?Livro book:RelacionamentoFraco book:da }.  ?Livro book:RelacionamentoFraco  book:sdfa.   }  UNION { ?Livro book:RelacionamentoForte  book:asd.   OPTIONAL {?Livro book:RelacionamentoFraco book:da }.  OPTIONAL {?Livro book:RelacionamentoFraco book:sdfa }.  }  UNION { OPTIONAL {?Livro book:RelacionamentoForte book:asd }.  ?Livro book:RelacionamentoForte  book:da.   ?Livro book:RelacionamentoForte  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoForte book:asd }.  ?Livro book:RelacionamentoForte  book:da.   OPTIONAL {?Livro book:RelacionamentoForte book:sdfa }.  }  UNION { OPTIONAL {?Livro book:RelacionamentoForte book:asd }.  ?Livro book:RelacionamentoForte  book:da.   ?Livro book:RelacionamentoMedio  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoForte book:asd }.  ?Livro book:RelacionamentoForte  book:da.   OPTIONAL {?Livro book:RelacionamentoMedio book:sdfa }.  }  UNION { OPTIONAL {?Livro book:RelacionamentoForte book:asd }.  ?Livro book:RelacionamentoForte  book:da.   ?Livro book:RelacionamentoFraco  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoForte book:asd }.  ?Livro book:RelacionamentoForte  book:da.   OPTIONAL {?Livro book:RelacionamentoFraco book:sdfa }.  }  UNION { OPTIONAL {?Livro book:RelacionamentoForte book:asd }.  OPTIONAL {?Livro book:RelacionamentoForte book:da }.  ?Livro book:RelacionamentoForte  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoForte book:asd }.  OPTIONAL {?Livro book:RelacionamentoForte book:da }.  ?Livro book:RelacionamentoMedio  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoForte book:asd }.  OPTIONAL {?Livro book:RelacionamentoForte book:da }.  ?Livro book:RelacionamentoFraco  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoForte book:asd }.  ?Livro book:RelacionamentoMedio  book:da.   ?Livro book:RelacionamentoForte  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoForte book:asd }.  ?Livro book:RelacionamentoMedio  book:da.   OPTIONAL {?Livro book:RelacionamentoForte book:sdfa }.  }  UNION { OPTIONAL {?Livro book:RelacionamentoForte book:asd }.  ?Livro book:RelacionamentoMedio  book:da.   ?Livro book:RelacionamentoMedio  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoForte book:asd }.  ?Livro book:RelacionamentoMedio  book:da.   OPTIONAL {?Livro book:RelacionamentoMedio book:sdfa }.  }  UNION { OPTIONAL {?Livro book:RelacionamentoForte book:asd }.  ?Livro book:RelacionamentoMedio  book:da.   ?Livro book:RelacionamentoFraco  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoForte book:asd }.  ?Livro book:RelacionamentoMedio  book:da.   OPTIONAL {?Livro book:RelacionamentoFraco book:sdfa }.  }  UNION { OPTIONAL {?Livro book:RelacionamentoForte book:asd }.  OPTIONAL {?Livro book:RelacionamentoMedio book:da }.  ?Livro book:RelacionamentoForte  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoForte book:asd }.  OPTIONAL {?Livro book:RelacionamentoMedio book:da }.  ?Livro book:RelacionamentoMedio  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoForte book:asd }.  OPTIONAL {?Livro book:RelacionamentoMedio book:da }.  ?Livro book:RelacionamentoFraco  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoForte book:asd }.  ?Livro book:RelacionamentoFraco  book:da.   ?Livro book:RelacionamentoForte  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoForte book:asd }.  ?Livro book:RelacionamentoFraco  book:da.   OPTIONAL {?Livro book:RelacionamentoForte book:sdfa }.  }  UNION { OPTIONAL {?Livro book:RelacionamentoForte book:asd }.  ?Livro book:RelacionamentoFraco  book:da.   ?Livro book:RelacionamentoMedio  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoForte book:asd }.  ?Livro book:RelacionamentoFraco  book:da.   OPTIONAL {?Livro book:RelacionamentoMedio book:sdfa }.  }  UNION { OPTIONAL {?Livro book:RelacionamentoForte book:asd }.  ?Livro book:RelacionamentoFraco  book:da.   ?Livro book:RelacionamentoFraco  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoForte book:asd }.  ?Livro book:RelacionamentoFraco  book:da.   OPTIONAL {?Livro book:RelacionamentoFraco book:sdfa }.  }  UNION { OPTIONAL {?Livro book:RelacionamentoForte book:asd }.  OPTIONAL {?Livro book:RelacionamentoFraco book:da }.  ?Livro book:RelacionamentoForte  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoForte book:asd }.  OPTIONAL {?Livro book:RelacionamentoFraco book:da }.  ?Livro book:RelacionamentoMedio  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoForte book:asd }.  OPTIONAL {?Livro book:RelacionamentoFraco book:da }.  ?Livro book:RelacionamentoFraco  book:sdfa.   }  UNION { ?Livro book:RelacionamentoMedio  book:asd.   ?Livro book:RelacionamentoForte  book:da.   ?Livro book:RelacionamentoForte  book:sdfa.   }  UNION { ?Livro book:RelacionamentoMedio  book:asd.   ?Livro book:RelacionamentoForte  book:da.   OPTIONAL {?Livro book:RelacionamentoForte book:sdfa }.  }  UNION { ?Livro book:RelacionamentoMedio  book:asd.   ?Livro book:RelacionamentoForte  book:da.   ?Livro book:RelacionamentoMedio  book:sdfa.   }  UNION { ?Livro book:RelacionamentoMedio  book:asd.   ?Livro book:RelacionamentoForte  book:da.   OPTIONAL {?Livro book:RelacionamentoMedio book:sdfa }.  }  UNION { ?Livro book:RelacionamentoMedio  book:asd.   ?Livro book:RelacionamentoForte  book:da.   ?Livro book:RelacionamentoFraco  book:sdfa.   }  UNION { ?Livro book:RelacionamentoMedio  book:asd.   ?Livro book:RelacionamentoForte  book:da.   OPTIONAL {?Livro book:RelacionamentoFraco book:sdfa }.  }  UNION { ?Livro book:RelacionamentoMedio  book:asd.   OPTIONAL {?Livro book:RelacionamentoForte book:da }.  ?Livro book:RelacionamentoForte  book:sdfa.   }  UNION { ?Livro book:RelacionamentoMedio  book:asd.   OPTIONAL {?Livro book:RelacionamentoForte book:da }.  OPTIONAL {?Livro book:RelacionamentoForte book:sdfa }.  }  UNION { ?Livro book:RelacionamentoMedio  book:asd.   OPTIONAL {?Livro book:RelacionamentoForte book:da }.  ?Livro book:RelacionamentoMedio  book:sdfa.   }  UNION { ?Livro book:RelacionamentoMedio  book:asd.   OPTIONAL {?Livro book:RelacionamentoForte book:da }.  OPTIONAL {?Livro book:RelacionamentoMedio book:sdfa }.  }  UNION { ?Livro book:RelacionamentoMedio  book:asd.   OPTIONAL {?Livro book:RelacionamentoForte book:da }.  ?Livro book:RelacionamentoFraco  book:sdfa.   }  UNION { ?Livro book:RelacionamentoMedio  book:asd.   OPTIONAL {?Livro book:RelacionamentoForte book:da }.  OPTIONAL {?Livro book:RelacionamentoFraco book:sdfa }.  }  UNION { ?Livro book:RelacionamentoMedio  book:asd.   ?Livro book:RelacionamentoMedio  book:da.   ?Livro book:RelacionamentoForte  book:sdfa.   }  UNION { ?Livro book:RelacionamentoMedio  book:asd.   ?Livro book:RelacionamentoMedio  book:da.   OPTIONAL {?Livro book:RelacionamentoForte book:sdfa }.  }  UNION { ?Livro book:RelacionamentoMedio  book:asd.   ?Livro book:RelacionamentoMedio  book:da.   ?Livro book:RelacionamentoMedio  book:sdfa.   }  UNION { ?Livro book:RelacionamentoMedio  book:asd.   ?Livro book:RelacionamentoMedio  book:da.   OPTIONAL {?Livro book:RelacionamentoMedio book:sdfa }.  }  UNION { ?Livro book:RelacionamentoMedio  book:asd.   ?Livro book:RelacionamentoMedio  book:da.   ?Livro book:RelacionamentoFraco  book:sdfa.   }  UNION { ?Livro book:RelacionamentoMedio  book:asd.   ?Livro book:RelacionamentoMedio  book:da.   OPTIONAL {?Livro book:RelacionamentoFraco book:sdfa }.  }  UNION { ?Livro book:RelacionamentoMedio  book:asd.   OPTIONAL {?Livro book:RelacionamentoMedio book:da }.  ?Livro book:RelacionamentoForte  book:sdfa.   }  UNION { ?Livro book:RelacionamentoMedio  book:asd.   OPTIONAL {?Livro book:RelacionamentoMedio book:da }.  OPTIONAL {?Livro book:RelacionamentoForte book:sdfa }.  }  UNION { ?Livro book:RelacionamentoMedio  book:asd.   OPTIONAL {?Livro book:RelacionamentoMedio book:da }.  ?Livro book:RelacionamentoMedio  book:sdfa.   }  UNION { ?Livro book:RelacionamentoMedio  book:asd.   OPTIONAL {?Livro book:RelacionamentoMedio book:da }.  OPTIONAL {?Livro book:RelacionamentoMedio book:sdfa }.  }  UNION { ?Livro book:RelacionamentoMedio  book:asd.   OPTIONAL {?Livro book:RelacionamentoMedio book:da }.  ?Livro book:RelacionamentoFraco  book:sdfa.   }  UNION { ?Livro book:RelacionamentoMedio  book:asd.   OPTIONAL {?Livro book:RelacionamentoMedio book:da }.  OPTIONAL {?Livro book:RelacionamentoFraco book:sdfa }.  }  UNION { ?Livro book:RelacionamentoMedio  book:asd.   ?Livro book:RelacionamentoFraco  book:da.   ?Livro book:RelacionamentoForte  book:sdfa.   }  UNION { ?Livro book:RelacionamentoMedio  book:asd.   ?Livro book:RelacionamentoFraco  book:da.   OPTIONAL {?Livro book:RelacionamentoForte book:sdfa }.  }  UNION { ?Livro book:RelacionamentoMedio  book:asd.   ?Livro book:RelacionamentoFraco  book:da.   ?Livro book:RelacionamentoMedio  book:sdfa.   }  UNION { ?Livro book:RelacionamentoMedio  book:asd.   ?Livro book:RelacionamentoFraco  book:da.   OPTIONAL {?Livro book:RelacionamentoMedio book:sdfa }.  }  UNION { ?Livro book:RelacionamentoMedio  book:asd.   ?Livro book:RelacionamentoFraco  book:da.   ?Livro book:RelacionamentoFraco  book:sdfa.   }  UNION { ?Livro book:RelacionamentoMedio  book:asd.   ?Livro book:RelacionamentoFraco  book:da.   OPTIONAL {?Livro book:RelacionamentoFraco book:sdfa }.  }  UNION { ?Livro book:RelacionamentoMedio  book:asd.   OPTIONAL {?Livro book:RelacionamentoFraco book:da }.  ?Livro book:RelacionamentoForte  book:sdfa.   }  UNION { ?Livro book:RelacionamentoMedio  book:asd.   OPTIONAL {?Livro book:RelacionamentoFraco book:da }.  OPTIONAL {?Livro book:RelacionamentoForte book:sdfa }.  }  UNION { ?Livro book:RelacionamentoMedio  book:asd.   OPTIONAL {?Livro book:RelacionamentoFraco book:da }.  ?Livro book:RelacionamentoMedio  book:sdfa.   }  UNION { ?Livro book:RelacionamentoMedio  book:asd.   OPTIONAL {?Livro book:RelacionamentoFraco book:da }.  OPTIONAL {?Livro book:RelacionamentoMedio book:sdfa }.  }  UNION { ?Livro book:RelacionamentoMedio  book:asd.   OPTIONAL {?Livro book:RelacionamentoFraco book:da }.  ?Livro book:RelacionamentoFraco  book:sdfa.   }  UNION { ?Livro book:RelacionamentoMedio  book:asd.   OPTIONAL {?Livro book:RelacionamentoFraco book:da }.  OPTIONAL {?Livro book:RelacionamentoFraco book:sdfa }.  }  UNION { OPTIONAL {?Livro book:RelacionamentoMedio book:asd }.  ?Livro book:RelacionamentoForte  book:da.   ?Livro book:RelacionamentoForte  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoMedio book:asd }.  ?Livro book:RelacionamentoForte  book:da.   OPTIONAL {?Livro book:RelacionamentoForte book:sdfa }.  }  UNION { OPTIONAL {?Livro book:RelacionamentoMedio book:asd }.  ?Livro book:RelacionamentoForte  book:da.   ?Livro book:RelacionamentoMedio  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoMedio book:asd }.  ?Livro book:RelacionamentoForte  book:da.   OPTIONAL {?Livro book:RelacionamentoMedio book:sdfa }.  }  UNION { OPTIONAL {?Livro book:RelacionamentoMedio book:asd }.  ?Livro book:RelacionamentoForte  book:da.   ?Livro book:RelacionamentoFraco  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoMedio book:asd }.  ?Livro book:RelacionamentoForte  book:da.   OPTIONAL {?Livro book:RelacionamentoFraco book:sdfa }.  }  UNION { OPTIONAL {?Livro book:RelacionamentoMedio book:asd }.  OPTIONAL {?Livro book:RelacionamentoForte book:da }.  ?Livro book:RelacionamentoForte  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoMedio book:asd }.  OPTIONAL {?Livro book:RelacionamentoForte book:da }.  ?Livro book:RelacionamentoMedio  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoMedio book:asd }.  OPTIONAL {?Livro book:RelacionamentoForte book:da }.  ?Livro book:RelacionamentoFraco  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoMedio book:asd }.  ?Livro book:RelacionamentoMedio  book:da.   ?Livro book:RelacionamentoForte  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoMedio book:asd }.  ?Livro book:RelacionamentoMedio  book:da.   OPTIONAL {?Livro book:RelacionamentoForte book:sdfa }.  }  UNION { OPTIONAL {?Livro book:RelacionamentoMedio book:asd }.  ?Livro book:RelacionamentoMedio  book:da.   ?Livro book:RelacionamentoMedio  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoMedio book:asd }.  ?Livro book:RelacionamentoMedio  book:da.   OPTIONAL {?Livro book:RelacionamentoMedio book:sdfa }.  }  UNION { OPTIONAL {?Livro book:RelacionamentoMedio book:asd }.  ?Livro book:RelacionamentoMedio  book:da.   ?Livro book:RelacionamentoFraco  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoMedio book:asd }.  ?Livro book:RelacionamentoMedio  book:da.   OPTIONAL {?Livro book:RelacionamentoFraco book:sdfa }.  }  UNION { OPTIONAL {?Livro book:RelacionamentoMedio book:asd }.  OPTIONAL {?Livro book:RelacionamentoMedio book:da }.  ?Livro book:RelacionamentoForte  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoMedio book:asd }.  OPTIONAL {?Livro book:RelacionamentoMedio book:da }.  ?Livro book:RelacionamentoMedio  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoMedio book:asd }.  OPTIONAL {?Livro book:RelacionamentoMedio book:da }.  ?Livro book:RelacionamentoFraco  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoMedio book:asd }.  ?Livro book:RelacionamentoFraco  book:da.   ?Livro book:RelacionamentoForte  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoMedio book:asd }.  ?Livro book:RelacionamentoFraco  book:da.   OPTIONAL {?Livro book:RelacionamentoForte book:sdfa }.  }  UNION { OPTIONAL {?Livro book:RelacionamentoMedio book:asd }.  ?Livro book:RelacionamentoFraco  book:da.   ?Livro book:RelacionamentoMedio  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoMedio book:asd }.  ?Livro book:RelacionamentoFraco  book:da.   OPTIONAL {?Livro book:RelacionamentoMedio book:sdfa }.  }  UNION { OPTIONAL {?Livro book:RelacionamentoMedio book:asd }.  ?Livro book:RelacionamentoFraco  book:da.   ?Livro book:RelacionamentoFraco  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoMedio book:asd }.  ?Livro book:RelacionamentoFraco  book:da.   OPTIONAL {?Livro book:RelacionamentoFraco book:sdfa }.  }  UNION { OPTIONAL {?Livro book:RelacionamentoMedio book:asd }.  OPTIONAL {?Livro book:RelacionamentoFraco book:da }.  ?Livro book:RelacionamentoForte  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoMedio book:asd }.  OPTIONAL {?Livro book:RelacionamentoFraco book:da }.  ?Livro book:RelacionamentoMedio  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoMedio book:asd }.  OPTIONAL {?Livro book:RelacionamentoFraco book:da }.  ?Livro book:RelacionamentoFraco  book:sdfa.   }  UNION { ?Livro book:RelacionamentoFraco  book:asd.   ?Livro book:RelacionamentoForte  book:da.   ?Livro book:RelacionamentoForte  book:sdfa.   }  UNION { ?Livro book:RelacionamentoFraco  book:asd.   ?Livro book:RelacionamentoForte  book:da.   OPTIONAL {?Livro book:RelacionamentoForte book:sdfa }.  }  UNION { ?Livro book:RelacionamentoFraco  book:asd.   ?Livro book:RelacionamentoForte  book:da.   ?Livro book:RelacionamentoMedio  book:sdfa.   }  UNION { ?Livro book:RelacionamentoFraco  book:asd.   ?Livro book:RelacionamentoForte  book:da.   OPTIONAL {?Livro book:RelacionamentoMedio book:sdfa }.  }  UNION { ?Livro book:RelacionamentoFraco  book:asd.   ?Livro book:RelacionamentoForte  book:da.   ?Livro book:RelacionamentoFraco  book:sdfa.   }  UNION { ?Livro book:RelacionamentoFraco  book:asd.   ?Livro book:RelacionamentoForte  book:da.   OPTIONAL {?Livro book:RelacionamentoFraco book:sdfa }.  }  UNION { ?Livro book:RelacionamentoFraco  book:asd.   OPTIONAL {?Livro book:RelacionamentoForte book:da }.  ?Livro book:RelacionamentoForte  book:sdfa.   }  UNION { ?Livro book:RelacionamentoFraco  book:asd.   OPTIONAL {?Livro book:RelacionamentoForte book:da }.  OPTIONAL {?Livro book:RelacionamentoForte book:sdfa }.  }  UNION { ?Livro book:RelacionamentoFraco  book:asd.   OPTIONAL {?Livro book:RelacionamentoForte book:da }.  ?Livro book:RelacionamentoMedio  book:sdfa.   }  UNION { ?Livro book:RelacionamentoFraco  book:asd.   OPTIONAL {?Livro book:RelacionamentoForte book:da }.  OPTIONAL {?Livro book:RelacionamentoMedio book:sdfa }.  }  UNION { ?Livro book:RelacionamentoFraco  book:asd.   OPTIONAL {?Livro book:RelacionamentoForte book:da }.  ?Livro book:RelacionamentoFraco  book:sdfa.   }  UNION { ?Livro book:RelacionamentoFraco  book:asd.   OPTIONAL {?Livro book:RelacionamentoForte book:da }.  OPTIONAL {?Livro book:RelacionamentoFraco book:sdfa }.  }  UNION { ?Livro book:RelacionamentoFraco  book:asd.   ?Livro book:RelacionamentoMedio  book:da.   ?Livro book:RelacionamentoForte  book:sdfa.   }  UNION { ?Livro book:RelacionamentoFraco  book:asd.   ?Livro book:RelacionamentoMedio  book:da.   OPTIONAL {?Livro book:RelacionamentoForte book:sdfa }.  }  UNION { ?Livro book:RelacionamentoFraco  book:asd.   ?Livro book:RelacionamentoMedio  book:da.   ?Livro book:RelacionamentoMedio  book:sdfa.   }  UNION { ?Livro book:RelacionamentoFraco  book:asd.   ?Livro book:RelacionamentoMedio  book:da.   OPTIONAL {?Livro book:RelacionamentoMedio book:sdfa }.  }  UNION { ?Livro book:RelacionamentoFraco  book:asd.   ?Livro book:RelacionamentoMedio  book:da.   ?Livro book:RelacionamentoFraco  book:sdfa.   }  UNION { ?Livro book:RelacionamentoFraco  book:asd.   ?Livro book:RelacionamentoMedio  book:da.   OPTIONAL {?Livro book:RelacionamentoFraco book:sdfa }.  }  UNION { ?Livro book:RelacionamentoFraco  book:asd.   OPTIONAL {?Livro book:RelacionamentoMedio book:da }.  ?Livro book:RelacionamentoForte  book:sdfa.   }  UNION { ?Livro book:RelacionamentoFraco  book:asd.   OPTIONAL {?Livro book:RelacionamentoMedio book:da }.  OPTIONAL {?Livro book:RelacionamentoForte book:sdfa }.  }  UNION { ?Livro book:RelacionamentoFraco  book:asd.   OPTIONAL {?Livro book:RelacionamentoMedio book:da }.  ?Livro book:RelacionamentoMedio  book:sdfa.   }  UNION { ?Livro book:RelacionamentoFraco  book:asd.   OPTIONAL {?Livro book:RelacionamentoMedio book:da }.  OPTIONAL {?Livro book:RelacionamentoMedio book:sdfa }.  }  UNION { ?Livro book:RelacionamentoFraco  book:asd.   OPTIONAL {?Livro book:RelacionamentoMedio book:da }.  ?Livro book:RelacionamentoFraco  book:sdfa.   }  UNION { ?Livro book:RelacionamentoFraco  book:asd.   OPTIONAL {?Livro book:RelacionamentoMedio book:da }.  OPTIONAL {?Livro book:RelacionamentoFraco book:sdfa }.  }  UNION { ?Livro book:RelacionamentoFraco  book:asd.   ?Livro book:RelacionamentoFraco  book:da.   ?Livro book:RelacionamentoForte  book:sdfa.   }  UNION { ?Livro book:RelacionamentoFraco  book:asd.   ?Livro book:RelacionamentoFraco  book:da.   OPTIONAL {?Livro book:RelacionamentoForte book:sdfa }.  }  UNION { ?Livro book:RelacionamentoFraco  book:asd.   ?Livro book:RelacionamentoFraco  book:da.   ?Livro book:RelacionamentoMedio  book:sdfa.   }  UNION { ?Livro book:RelacionamentoFraco  book:asd.   ?Livro book:RelacionamentoFraco  book:da.   OPTIONAL {?Livro book:RelacionamentoMedio book:sdfa }.  }  UNION { ?Livro book:RelacionamentoFraco  book:asd.   ?Livro book:RelacionamentoFraco  book:da.   ?Livro book:RelacionamentoFraco  book:sdfa.   }  UNION { ?Livro book:RelacionamentoFraco  book:asd.   ?Livro book:RelacionamentoFraco  book:da.   OPTIONAL {?Livro book:RelacionamentoFraco book:sdfa }.  }  UNION { ?Livro book:RelacionamentoFraco  book:asd.   OPTIONAL {?Livro book:RelacionamentoFraco book:da }.  ?Livro book:RelacionamentoForte  book:sdfa.   }  UNION { ?Livro book:RelacionamentoFraco  book:asd.   OPTIONAL {?Livro book:RelacionamentoFraco book:da }.  OPTIONAL {?Livro book:RelacionamentoForte book:sdfa }.  }  UNION { ?Livro book:RelacionamentoFraco  book:asd.   OPTIONAL {?Livro book:RelacionamentoFraco book:da }.  ?Livro book:RelacionamentoMedio  book:sdfa.   }  UNION { ?Livro book:RelacionamentoFraco  book:asd.   OPTIONAL {?Livro book:RelacionamentoFraco book:da }.  OPTIONAL {?Livro book:RelacionamentoMedio book:sdfa }.  }  UNION { ?Livro book:RelacionamentoFraco  book:asd.   OPTIONAL {?Livro book:RelacionamentoFraco book:da }.  ?Livro book:RelacionamentoFraco  book:sdfa.   }  UNION { ?Livro book:RelacionamentoFraco  book:asd.   OPTIONAL {?Livro book:RelacionamentoFraco book:da }.  OPTIONAL {?Livro book:RelacionamentoFraco book:sdfa }.  }  UNION { OPTIONAL {?Livro book:RelacionamentoFraco book:asd }.  ?Livro book:RelacionamentoForte  book:da.   ?Livro book:RelacionamentoForte  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoFraco book:asd }.  ?Livro book:RelacionamentoForte  book:da.   OPTIONAL {?Livro book:RelacionamentoForte book:sdfa }.  }  UNION { OPTIONAL {?Livro book:RelacionamentoFraco book:asd }.  ?Livro book:RelacionamentoForte  book:da.   ?Livro book:RelacionamentoMedio  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoFraco book:asd }.  ?Livro book:RelacionamentoForte  book:da.   OPTIONAL {?Livro book:RelacionamentoMedio book:sdfa }.  }  UNION { OPTIONAL {?Livro book:RelacionamentoFraco book:asd }.  ?Livro book:RelacionamentoForte  book:da.   ?Livro book:RelacionamentoFraco  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoFraco book:asd }.  ?Livro book:RelacionamentoForte  book:da.   OPTIONAL {?Livro book:RelacionamentoFraco book:sdfa }.  }  UNION { OPTIONAL {?Livro book:RelacionamentoFraco book:asd }.  OPTIONAL {?Livro book:RelacionamentoForte book:da }.  ?Livro book:RelacionamentoForte  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoFraco book:asd }.  OPTIONAL {?Livro book:RelacionamentoForte book:da }.  ?Livro book:RelacionamentoMedio  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoFraco book:asd }.  OPTIONAL {?Livro book:RelacionamentoForte book:da }.  ?Livro book:RelacionamentoFraco  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoFraco book:asd }.  ?Livro book:RelacionamentoMedio  book:da.   ?Livro book:RelacionamentoForte  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoFraco book:asd }.  ?Livro book:RelacionamentoMedio  book:da.   OPTIONAL {?Livro book:RelacionamentoForte book:sdfa }.  }  UNION { OPTIONAL {?Livro book:RelacionamentoFraco book:asd }.  ?Livro book:RelacionamentoMedio  book:da.   ?Livro book:RelacionamentoMedio  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoFraco book:asd }.  ?Livro book:RelacionamentoMedio  book:da.   OPTIONAL {?Livro book:RelacionamentoMedio book:sdfa }.  }  UNION { OPTIONAL {?Livro book:RelacionamentoFraco book:asd }.  ?Livro book:RelacionamentoMedio  book:da.   ?Livro book:RelacionamentoFraco  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoFraco book:asd }.  ?Livro book:RelacionamentoMedio  book:da.   OPTIONAL {?Livro book:RelacionamentoFraco book:sdfa }.  }  UNION { OPTIONAL {?Livro book:RelacionamentoFraco book:asd }.  OPTIONAL {?Livro book:RelacionamentoMedio book:da }.  ?Livro book:RelacionamentoForte  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoFraco book:asd }.  OPTIONAL {?Livro book:RelacionamentoMedio book:da }.  ?Livro book:RelacionamentoMedio  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoFraco book:asd }.  OPTIONAL {?Livro book:RelacionamentoMedio book:da }.  ?Livro book:RelacionamentoFraco  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoFraco book:asd }.  ?Livro book:RelacionamentoFraco  book:da.   ?Livro book:RelacionamentoForte  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoFraco book:asd }.  ?Livro book:RelacionamentoFraco  book:da.   OPTIONAL {?Livro book:RelacionamentoForte book:sdfa }.  }  UNION { OPTIONAL {?Livro book:RelacionamentoFraco book:asd }.  ?Livro book:RelacionamentoFraco  book:da.   ?Livro book:RelacionamentoMedio  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoFraco book:asd }.  ?Livro book:RelacionamentoFraco  book:da.   OPTIONAL {?Livro book:RelacionamentoMedio book:sdfa }.  }  UNION { OPTIONAL {?Livro book:RelacionamentoFraco book:asd }.  ?Livro book:RelacionamentoFraco  book:da.   ?Livro book:RelacionamentoFraco  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoFraco book:asd }.  ?Livro book:RelacionamentoFraco  book:da.   OPTIONAL {?Livro book:RelacionamentoFraco book:sdfa }.  }  UNION { OPTIONAL {?Livro book:RelacionamentoFraco book:asd }.  OPTIONAL {?Livro book:RelacionamentoFraco book:da }.  ?Livro book:RelacionamentoForte  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoFraco book:asd }.  OPTIONAL {?Livro book:RelacionamentoFraco book:da }.  ?Livro book:RelacionamentoMedio  book:sdfa.   }  UNION { OPTIONAL {?Livro book:RelacionamentoFraco book:asd }.  OPTIONAL {?Livro book:RelacionamentoFraco book:da }.  ?Livro book:RelacionamentoFraco  book:sdfa.   } 
+                  }

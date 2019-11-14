@@ -1,0 +1,14 @@
+----------------------------------------------
+19:21 |
+          Query: PREFIX book: <urn:absolute:/2017/5/tcc-1.0.0#>
+                 SELECT ?Livro 
+                  WHERE {
+                    { ?Livro book:RelacionamentoForte book:ds.   }  UNION { ?Livro book:RelacionamentoMedio book:ds.   }  UNION { ?Livro book:RelacionamentoFraco book:ds.   } 
+                  }
+----------------------------------------------
+19:21 |
+          Query: PREFIX book: <urn:absolute:/2017/5/tcc-1.0.0#>
+                 SELECT ?Livro 
+                  WHERE {
+                    { ?Livro book:RelacionamentoForte book:ds.   }  UNION { ?Livro book:RelacionamentoMedio book:ds.   }  UNION { ?Livro book:RelacionamentoFraco book:ds.   } 
+                  }

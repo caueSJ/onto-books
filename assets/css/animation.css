@@ -1,0 +1,57 @@
+/* -----------------------------------------
+  =Default css to make the demo more pretty
+-------------------------------------------- */
+.content {
+    width: 100%;
+    padding: 15px;
+    overflow: hidden;
+    background-color: #e7e7e7;
+    background-color: white;
+}
+
+.clear {clear:both;}
+
+/* -----------------------------------------
+  =CSS3 Loading animations
+-------------------------------------------- */
+
+/* =Elements style
+---------------------- */
+.load-wrapp {
+    float: left;
+    width: 100%;
+    height: 100px;
+    margin: 0 10px 10px 0;
+    padding: 20px 20px 20px;
+    border-radius: 5px;
+    text-align: center;
+   
+}
+
+.load-wrapp:last-child {margin-right: 0;}
+
+.line {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    background-color: #4b9cdb;
+}
+
+/* =Animate the stuff
+------------------------ */
+.load-2 .line:nth-last-child(1) {animation: loadingB 3s 2.5s infinite;}
+.load-2 .line:nth-last-child(2) {animation: loadingB 3s 2s infinite;}
+.load-2 .line:nth-last-child(3) {animation: loadingB 3s 1.5s infinite;}
+.load-2 .line:nth-last-child(4) {animation: loadingB 3s 1s infinite;}
+.load-2 .line:nth-last-child(5) {animation: loadingB 3s .5s infinite;}
+.load-2 .line:nth-last-child(6) {animation: loadingB 3s 0s infinite;}
+.load-2 .line:nth-last-child(7) {animation: loadingB 3s 0s infinite;}
+
+@keyframes loadingB {
+    0 {width: 15px;}
+    50% {width: 35px;}
+    100% {width: 15px;}
+}
+
+

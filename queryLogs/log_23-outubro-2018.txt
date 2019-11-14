@@ -1,0 +1,88 @@
+----------------------------------------------
+22:45 |
+          Query: PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#>
+                 SELECT ?Livro 
+                  WHERE {
+                    { ?Livro book:RelacionamentoForte  book:Programação.   }  UNION { ?Livro book:RelacionamentoMedio  book:Programação.   }  UNION { ?Livro book:RelacionamentoFraco  book:Programação.   } 
+                  }
+----------------------------------------------
+22:48 |
+          Query: PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#>
+                 SELECT ?Livro 
+                  WHERE {
+                    { ?Livro book:RelacionamentoForte  book:Teste.   }  UNION { ?Livro book:RelacionamentoMedio  book:Teste.   }  UNION { ?Livro book:RelacionamentoFraco  book:Teste.   } 
+                  }
+----------------------------------------------
+22:51 |
+          Query: PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#>
+                 SELECT ?Livro 
+                  WHERE {
+                    { ?Livro book:RelacionamentoForte  book:Teste.   }  UNION { ?Livro book:RelacionamentoMedio  book:Teste.   }  UNION { ?Livro book:RelacionamentoFraco  book:Teste.   } 
+                  }
+----------------------------------------------
+22:57 |
+          Query: PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#>
+                 SELECT ?Livro 
+                  WHERE {
+                    { ?Livro book:RelacionamentoForte  book:Teste.   }  UNION { ?Livro book:RelacionamentoMedio  book:Teste.   }  UNION { ?Livro book:RelacionamentoFraco  book:Teste.   } 
+                  }
+----------------------------------------------
+23:07 |
+          Query: PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#>
+                 SELECT ?Livro 
+                  WHERE {
+                    { ?Livro book:RelacionamentoForte  book:teste.   }  UNION { ?Livro book:RelacionamentoMedio  book:teste.   }  UNION { ?Livro book:RelacionamentoFraco  book:teste.   } 
+                  }
+----------------------------------------------
+23:07 |
+          Query: PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#>
+                 SELECT ?Livro 
+                  WHERE {
+                    { ?Livro book:RelacionamentoForte  book:java.   }  UNION { ?Livro book:RelacionamentoMedio  book:java.   }  UNION { ?Livro book:RelacionamentoFraco  book:java.   } 
+                  }
+----------------------------------------------
+23:12 |
+          Query: PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#>
+                 SELECT ?Livro 
+                  WHERE {
+                    { ?Livro book:RelacionamentoForte  book:java.   }  UNION { ?Livro book:RelacionamentoMedio  book:java.   }  UNION { ?Livro book:RelacionamentoFraco  book:java.   } 
+                  }
+----------------------------------------------
+23:20 |
+          Query: PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#>
+                 SELECT ?Livro 
+                  WHERE {
+                    { ?Livro book:RelacionamentoForte  book:java.   }  UNION { ?Livro book:RelacionamentoMedio  book:java.   }  UNION { ?Livro book:RelacionamentoFraco  book:java.   } 
+                  }
+----------------------------------------------
+23:28 |
+          Query: PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#>
+                 SELECT ?Livro 
+                  WHERE {
+                    { ?Livro book:RelacionamentoForte  book:lean.   }  UNION { ?Livro book:RelacionamentoMedio  book:lean.   }  UNION { ?Livro book:RelacionamentoFraco  book:lean.   } 
+                  }
+----------------------------------------------
+23:28 |
+          Query: PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#>
+                 SELECT ?Livro 
+                  WHERE {
+                    { ?Livro book:RelacionamentoForte  book:startup.   }  UNION { ?Livro book:RelacionamentoMedio  book:startup.   }  UNION { ?Livro book:RelacionamentoFraco  book:startup.   } 
+                  }
+----------------------------------------------
+23:29 |
+          Query: forte :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:30 book:RelacionamentoForte ?termo.}}
+ medio :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:30 book:RelacionamentoMedio ?termo.}}
+ fraco :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:30 book:RelacionamentoFraco ?termo.}}
+----------------------------------------------
+23:30 |
+          Query: PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#>
+                 SELECT ?Livro 
+                  WHERE {
+                    { ?Livro book:RelacionamentoForte  book:library.   }  UNION { ?Livro book:RelacionamentoMedio  book:library.   }  UNION { ?Livro book:RelacionamentoFraco  book:library.   } 
+                  }

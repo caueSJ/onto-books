@@ -1,0 +1,124 @@
+----------------------------------------------
+10:55 |
+          Query: forte :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:2 book:RelacionamentoForte ?termo.}}
+ medio :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:2 book:RelacionamentoMedio ?termo.}}
+ fraco :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:2 book:RelacionamentoFraco ?termo.}}
+----------------------------------------------
+10:55 |
+          Query: forte :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:1 book:RelacionamentoForte ?termo.}}
+ medio :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:1 book:RelacionamentoMedio ?termo.}}
+ fraco :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:1 book:RelacionamentoFraco ?termo.}}
+----------------------------------------------
+10:56 |
+          Query: forte :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:4 book:RelacionamentoForte ?termo.}}
+ medio :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:4 book:RelacionamentoMedio ?termo.}}
+ fraco :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:4 book:RelacionamentoFraco ?termo.}}
+----------------------------------------------
+10:56 |
+          Query: forte :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:4 book:RelacionamentoForte ?termo.}}
+ medio :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:4 book:RelacionamentoMedio ?termo.}}
+ fraco :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:4 book:RelacionamentoFraco ?termo.}}
+----------------------------------------------
+10:57 |
+          Query: forte :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:4 book:RelacionamentoForte ?termo.}}
+ medio :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:4 book:RelacionamentoMedio ?termo.}}
+ fraco :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:4 book:RelacionamentoFraco ?termo.}}
+----------------------------------------------
+10:57 |
+          Query: forte :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:2 book:RelacionamentoForte ?termo.}}
+ medio :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:2 book:RelacionamentoMedio ?termo.}}
+ fraco :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:2 book:RelacionamentoFraco ?termo.}}
+----------------------------------------------
+10:57 |
+          Query: forte :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:4 book:RelacionamentoForte ?termo.}}
+ medio :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:4 book:RelacionamentoMedio ?termo.}}
+ fraco :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:4 book:RelacionamentoFraco ?termo.}}
+----------------------------------------------
+12:34 |
+          Query: forte :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:15 book:RelacionamentoForte ?termo.}}
+ medio :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:15 book:RelacionamentoMedio ?termo.}}
+ fraco :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:15 book:RelacionamentoFraco ?termo.}}
+----------------------------------------------
+12:55 |
+          Query: forte :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:15 book:RelacionamentoForte ?termo.}}
+ medio :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:15 book:RelacionamentoMedio ?termo.}}
+ fraco :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:15 book:RelacionamentoFraco ?termo.}}
+----------------------------------------------
+15:48 |
+          Query: PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#>
+                 SELECT ?Livro 
+                  WHERE {
+                    { ?Livro book:RelacionamentoForte  book:polimorfismo.   ?Livro book:RelacionamentoForte  book:java.   }  UNION { ?Livro book:RelacionamentoForte  book:polimorfismo.   ?Livro book:RelacionamentoMedio  book:java.   }  UNION { ?Livro book:RelacionamentoForte  book:polimorfismo.   ?Livro book:RelacionamentoFraco  book:java.   }  UNION { ?Livro book:RelacionamentoForte  book:polimorfismo.   OPTIONAL {?Livro book:RelacionamentoFraco book:java }.  }  UNION { ?Livro book:RelacionamentoMedio  book:polimorfismo.   ?Livro book:RelacionamentoForte  book:java.   }  UNION { ?Livro book:RelacionamentoMedio  book:polimorfismo.   ?Livro book:RelacionamentoMedio  book:java.   }  UNION { ?Livro book:RelacionamentoMedio  book:polimorfismo.   ?Livro book:RelacionamentoFraco  book:java.   }  UNION { ?Livro book:RelacionamentoMedio  book:polimorfismo.   OPTIONAL {?Livro book:RelacionamentoFraco book:java }.  }  UNION { ?Livro book:RelacionamentoFraco  book:polimorfismo.   ?Livro book:RelacionamentoForte  book:java.   }  UNION { ?Livro book:RelacionamentoFraco  book:polimorfismo.   ?Livro book:RelacionamentoMedio  book:java.   }  UNION { ?Livro book:RelacionamentoFraco  book:polimorfismo.   ?Livro book:RelacionamentoFraco  book:java.   }  UNION { ?Livro book:RelacionamentoFraco  book:polimorfismo.   OPTIONAL {?Livro book:RelacionamentoFraco book:java }.  }  UNION { OPTIONAL {?Livro book:RelacionamentoFraco book:polimorfismo }.  ?Livro book:RelacionamentoForte  book:java.   }  UNION { OPTIONAL {?Livro book:RelacionamentoFraco book:polimorfismo }.  ?Livro book:RelacionamentoMedio  book:java.   }  UNION { OPTIONAL {?Livro book:RelacionamentoFraco book:polimorfismo }.  ?Livro book:RelacionamentoFraco  book:java.   } 
+                  }
+----------------------------------------------
+16:02 |
+          Query: PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#>
+                 SELECT ?Livro 
+                  WHERE {
+                    { ?Livro book:RelacionamentoForte  book:polimorfismo.   ?Livro book:RelacionamentoForte  book:java.   }  UNION { ?Livro book:RelacionamentoForte  book:polimorfismo.   ?Livro book:RelacionamentoMedio  book:java.   }  UNION { ?Livro book:RelacionamentoForte  book:polimorfismo.   ?Livro book:RelacionamentoFraco  book:java.   }  UNION { ?Livro book:RelacionamentoForte  book:polimorfismo.   }  UNION { ?Livro book:RelacionamentoMedio  book:polimorfismo.   ?Livro book:RelacionamentoForte  book:java.   }  UNION { ?Livro book:RelacionamentoMedio  book:polimorfismo.   ?Livro book:RelacionamentoMedio  book:java.   }  UNION { ?Livro book:RelacionamentoMedio  book:polimorfismo.   ?Livro book:RelacionamentoFraco  book:java.   }  UNION { ?Livro book:RelacionamentoMedio  book:polimorfismo.   }  UNION { ?Livro book:RelacionamentoFraco  book:polimorfismo.   ?Livro book:RelacionamentoForte  book:java.   }  UNION { ?Livro book:RelacionamentoFraco  book:polimorfismo.   ?Livro book:RelacionamentoMedio  book:java.   }  UNION { ?Livro book:RelacionamentoFraco  book:polimorfismo.   ?Livro book:RelacionamentoFraco  book:java.   }  UNION { ?Livro book:RelacionamentoFraco  book:polimorfismo.   }  UNION { ?Livro book:RelacionamentoForte  book:java.   }  UNION { ?Livro book:RelacionamentoMedio  book:java.   }  UNION { ?Livro book:RelacionamentoFraco  book:java.   } 
+                  }
+----------------------------------------------
+16:10 |
+          Query: forte :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:17 book:RelacionamentoForte ?termo.}}
+ medio :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:17 book:RelacionamentoMedio ?termo.}}
+ fraco :   PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#> 
+                 SELECT  ?termo  where{
+                    {book:17 book:RelacionamentoFraco ?termo.}}

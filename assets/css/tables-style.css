@@ -1,0 +1,38 @@
+table.scroll {
+    width: 100%; /* Optional */
+    /* border-collapse: collapse; */
+    border-spacing: 0;
+    border: 2px solid black;    
+}
+
+table.scroll tbody,
+table.scroll thead { display: block; 
+padding:0;}
+
+thead.scroll tr th { 
+    height: 10px;
+    line-height: 10px;
+    /*text-align: left;*/
+}
+
+table.scroll tbody {
+    height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+tbody.scroll { border-top: 2px solid black; }
+
+tbody.scroll td {
+    width: 20%; /* Optional */
+}
+
+thead.scroll th {
+    width: 30%; /* Optional */
+}
+
+
+
+tbody.scroll td:last-child, thead.scroll th:last-child {
+    border-right: none;
+}

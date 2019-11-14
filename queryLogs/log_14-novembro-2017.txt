@@ -1,0 +1,7 @@
+----------------------------------------------
+07:50 |
+          Query: PREFIX book: <urn:absolute:/2017/5/tcc-2.0.0#>
+                 SELECT ?Livro 
+                  WHERE {
+                    { ?Livro book:RelacionamentoForte  book:q.   }  UNION { ?Livro book:RelacionamentoMedio  book:q.   }  UNION { ?Livro book:RelacionamentoFraco  book:q.   } 
+                  }
