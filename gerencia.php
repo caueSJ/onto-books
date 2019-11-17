@@ -20,6 +20,8 @@
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="assets/img/if_book.png">
 
+    <link href="assets/plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
     <!-- Custom fonts for this template -->
     <link href="vendor/font-awesome/css/all.css" rel="stylesheet" type="text/css">
 
@@ -30,7 +32,7 @@
     <link href="assets/css/creative.css" rel="stylesheet">
 </head>
 
-<body id="page-top" data-spy="scroll" data-target="#mainNav">
+<body id="page-top" data-spy="scroll" data-target="#mainNav" style="pr-0">
     <div class="ui fullscreen basic modal base-modal-fullscreen  "></div>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -46,7 +48,7 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="index.php">Home</a>
-                    </li>  
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#sobre">Sobre</a>
                     </li>
@@ -55,11 +57,7 @@
                             <a class="nav-link js-scroll-trigger active " href="#gerencia">Gerenciar</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger logout_menu " href="#">Sair</a>
-                        </li>
-                        <h1 class=" divider"></h1>
-                        <li class="nav-item">                    
-                            <a class="nav-link js-scroll-trigger" href="#">Olá, <div style="color:#F05F40;display: inline;"><?echo  explode(" ", $_SESSION['user_name'])[0];?></div></a>
+                            <a class="nav-link js-scroll-trigger logout_menu " href="#">Sair (<?echo  explode(" ", $_SESSION['user_name'])[0];?>)</a>
                         </li>
                     <? } else {
                         die("<script>location.href = 'index.php'</script>");
@@ -75,7 +73,7 @@
     <header class="masthead" id="gerencia" style="background-image: url('assets/img/fundo-header/<? echo $bg[$i] ?>');" >
         <div class="header-content">
             <div class="header-content-inner">
-                <h1 id="homeHeading">Gerenciar Buscador</h1>
+                <h1 id="homeHeading">Gerenciar Busador</h1>
 
                 <div class="container-fluid mt-5">
                     <div class="row">
@@ -92,7 +90,7 @@
                                 <div class="gerencia_menu_container">
                                     <i class="write huge icon ui"></i>
                                     <div class="header huge" >Autores</div>
-                                </div> 
+                                </div>
                             </a>
                         </div>
                         <div class="col">
@@ -100,7 +98,7 @@
                                 <div class="gerencia_menu_container">
                                     <i class="bookmark huge icon ui"></i>
                                     <div class="header huge" >Áreas</div>
-                                </div> 
+                                </div>
                             </a>
                         </div>
                         <div class="col">
@@ -108,7 +106,7 @@
                                 <div class="gerencia_menu_container">
                                     <i class="sort alphabet huge ascending icon"></i>
                                     <div class="header huge" >Termos</div>
-                                </div> 
+                                </div>
                             </a>
                         </div>
                         <div class="col">
@@ -116,25 +114,22 @@
                                 <div class="gerencia_menu_container">
                                     <i class="user huge icon ui"></i>
                                     <div class="header huge" >Usuários</div>
-                                </div> 
+                                </div>
                             </a>
                         </div>
                     </div>
                 </div>
-
-                <div class="ui  stackable relaxed grid" style="margin-top: 10px;">
-                </div>      
-                <div class="ui stackable relaxed grid" style="margin-top: 10px;">
-                </div>
             </div>
         </div>
     </header>
-
-    <section class="p-0  hidden_content" style="margin-top: 10px; min-height: 100%;" id="edicao">
-        <div class="edicao_gerencia_container hidden_content" style="padding: 10px; margin: 15px;"></div>
-        <div class="loding_edicao_container" style=" height: 1px;">
-            <i class="notched circle loading huge icon"></i>
-            <div  style="text-align: center;margin-top: 20px;display: inline;font-size: 30px; color:white;">Carregando...</div>
+    
+    <section class="hidden_content" style="min-height: 100%;" id="edicao">
+        <div class="container-fluid">
+            <div class="edicao_gerencia_container hidden_content" style="padding: 10px; margin: 15px;"></div>
+            <div class="loding_edicao_container" style=" height: 1px;">
+                <i class="notched circle loading huge icon"></i>
+                <!-- <div  style="text-align: center;margin-top: 20px;font-size: 30px; color:white;">Carregando...</div> -->
+            </div>
         </div>
     </section>
 
@@ -144,16 +139,16 @@
                 <div class="col-lg-8 mx-auto text-center">
                     <h2 class="section-heading">Quer saber mais?</h2>
                     <hr class="primary">
-                    <p>Esta é um projeto em desenvolvimento por um grupo de pesquisa no Instituto Federal de São Paulo campus São João da Boa Vista, na área de linguística computacional.</p>
+                    <p>Esta é um projeto em desenvolvimento pelo grupo de pesquisa <a href="">WebSemanTec</a> no Instituto Federal de São Paulo campus São João da Boa Vista, na área de linguística computacional.</p>
                 </div>
             </div>
-            <div class="row">
+            <div class="row mt-5">
                 <div class="col-lg-4 ml-auto text-center">
                     <i class="fa fa-phone fa-3x sr-contact"></i>
                     <p>(19) 3634-1100</p>
                 </div>
                 <div class="col-lg-4 mr-auto text-center">
-                    <i class="fa fa-envelope-o fa-3x sr-contact"></i>
+                    <i class="fas fa-envelope fa-3x sr-contact"></i>
                     <p><a href="mailto:contato@ifsp.edu.br">contato@ifsp.edu.br</a></p>
                 </div>
             </div>
@@ -179,8 +174,8 @@
     <script src ="assets/plugins/jquery.cookie.js"></script>
     <script src ="assets/plugins/replaceSpecialChars.js"></script>
     <script src ="assets/plugins/jquery.validate.min.js"></script>
-    <script src ="assets/plugins/DataTables-1.10.12/media/js/jquery.dataTables.min.js"></script>
-    <script src ="assets/plugins/DataTables-1.10.12/media/js/dataTables.semanticui.min.js"></script>
+    <script src ="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+	<script src ="assets/plugins/datatables/dataTables.bootstrap4.min.js"></script>
     <script src ="assets/plugins/Semantic/semantic.min.js"></script>
 
     <script src ="assets/plugins/SemanticAlerts/Semantic-UI-Alert.js" type="text/javascript"></script>

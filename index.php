@@ -56,13 +56,7 @@
                             <a class="nav-link js-scroll-trigger " href="gerencia.php">Gerenciar</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger logout_menu " href="#">Sair</a>
-                        </li>
-
-                        <h1 class=" divider"></h1>
-
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#">Olá, <div style="color:#F05F40;display: inline;"><?echo explode(" ", $_SESSION['user_name'])[0];?></div></a>
+                            <a class="nav-link js-scroll-trigger logout_menu " href="#">Sair (<?echo  explode(" ", $_SESSION['user_name'])[0];?>)</a>
                         </li>
                     <?} else {?>
                         <li class="nav-item">
@@ -87,7 +81,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text bg-primary text-white" id="logo-lupa-busca"><i class="fas fa-search"></i></span>
                     </div>
-                    <input type="text" class="form-control font-weight-bold" placeholder="Digite aqui sua busca" aria-label="Campo de texto para busca" aria-describedby="logo-lupa-busca">
+                    <input type="text" class="form-control font-weight-bold search_field" placeholder="Digite aqui sua busca" aria-label="Campo de texto para busca" aria-describedby="logo-lupa-busca">
                 </div>
                 <!-- <div class="ui labeled input" style="width: 100%;">
                     <div class="ui dropdown tipo_busca label">
@@ -189,7 +183,7 @@
     <script src ="assets/plugins/replaceSpecialChars.js"></script>
     <script src ="assets/plugins/jquery.validate.min.js"></script>
     <script src ="assets/plugins/DataTables-1.10.12/media/js/jquery.dataTables.min.js"></script>
-    <script src ="assets/plugins/DataTables-1.10.12/media/js/dataTables.semanticui.min.js"></script>
+    <script src ="assets/plugins/datatables/dataTables.bootstrap4.min.js"></script>
     <script src ="assets/plugins/Semantic/semantic.min.js"></script>
     <script src ="assets/plugins/SemanticAlerts/Semantic-UI-Alert.js" type="text/javascript"></script>
     <script src ="assets/plugins/jquery.tmpl.min.js"></script>

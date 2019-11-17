@@ -64,7 +64,7 @@ $(document).on("keydown", ".search_field", function(event){
     if (event.keyCode == 13) {
         var busca = $(".search_field").val();
         if(busca){
-            $('.buscar_button')[0].click();
+            $('."buscar_button"')[0].click();
             $('.search-input').blur();
             $('.search_field').blur();
         }else{
@@ -282,9 +282,6 @@ function appendDefaultCallBack(formName, container, variaveis){
 			$('.livro_modal_card').transition({
 				animation:'fade up',
 				duration: '500ms'});
-			$('.locais_livros').popup({
-			    on: 'hover'
-			  });
 			break;
 		case 'gerenciaModels/livros_gerencia':
 			initiateDataTable($('#lista_gerencia'),1);
@@ -495,7 +492,7 @@ function defaultAJAXCallback(controller, action, data, variaveis){
 					    getListaSemantic('livros_gerencia', 1, 'get_autores', 'form-autor',0,{id:livro.id_autor});
 						getListaSemantic('livros_gerencia', 1, 'get_editoras', 'form-editora',0,{id:livro.id_editora});
 						getListaSemantic('livros_gerencia', 1, 'get_areas', 'form-area',0,{id:livro.id_area});
-						getListaSemantic('livros_gerencia', 1, 'get_locais', 'form-local',0,{id:livro.id_local});
+						// getListaSemantic('livros_gerencia', 1, 'get_locais', 'form-local',0,{id:livro.id_local});
 						$('.'+controller+'-titulo').val(livro.titulo);
 						$('.'+controller+'-paginas').val(livro.paginas);
 						$('.'+controller+'-edicao').val(livro.edicao);
@@ -819,11 +816,11 @@ function doScrolling(element, duration) {
 
 
 function initiateDataTable(element, coluna =0, cardinal = 'asc', length = 10){
-
 	element.DataTable({
-		 		responsive: true,
+				responsive: true,
 				aaSorting: [[coluna, cardinal]],
-				"pageLength": length,
+				columnDefs: [{ targets: 6, orderable: false }],
+				pageLength: length,
 				"language":{
 				    "sEmptyTable": "Nenhum registro encontrado",
 				    "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
@@ -831,7 +828,7 @@ function initiateDataTable(element, coluna =0, cardinal = 'asc', length = 10){
 				    "sInfoFiltered": "(Filtrados de _MAX_ registros)",
 				    "sInfoPostFix": "",
 				    "sInfoThousands": ".",
-				    "sLengthMenu": "_MENU_ resultados por página",
+				    "sLengthMenu": "_MENU_ Resultados por página",
 				    "sLoadingRecords": "Carregando...",
 				    "sProcessing": "Processando...",
 				    "sZeroRecords": "Nenhum registro encontrado",

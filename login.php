@@ -154,8 +154,8 @@
 	<script src ="assets/plugins/jquery.cookie.js"></script>
 	<script src ="assets/plugins/replaceSpecialChars.js"></script>
 	<script src ="assets/plugins/jquery.validate.min.js"></script>
-	<script src ="assets/plugins/DataTables-1.10.12/media/js/jquery.dataTables.min.js"></script>
-	<script src ="assets/plugins/DataTables-1.10.12/media/js/dataTables.semanticui.min.js"></script>
+	<script src ="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+	<script src ="assets/plugins/datatables/dataTables.bootstrap4.min.js"></script>
 	<script src ="assets/plugins/Semantic/semantic.min.js"></script>
 	<script src ="assets/plugins/SemanticAlerts/Semantic-UI-Alert.js" type="text/javascript"></script>
 	<script src ="assets/plugins/jquery.tmpl.min.js"></script>
