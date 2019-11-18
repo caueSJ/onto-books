@@ -11,6 +11,95 @@ $livros = $dao->getLivros();
 $controller ='livros_gerencia';
 ?>
 
+<!-- Modais -->
+<!-- Adicionar Autor -->
+<div class="modal fade" id="modalCadastrarAutor" tabindex="-1" role="dialog" aria-labelledby="modalAutor" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalAutor">Cadastrar Autor</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="ui styled sixteen fluid wide">
+                    <div class="ui form form-gerencia-autores form-save-gerencia-autor">
+                        <div class="field">
+                            <input type="hidden"  class="id_item_gerencia">
+                            <label class="ui label ontobooks_color indice-1" data-indice = "1" tabindex="4">Nome do Autor</label>
+                            <input class="autores_gerencia-nome" placeholder="Nome" data-required='required' name="nome" type="text" value="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="ui red direita button" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="ui green direita save_gerencia button" data-controller='autores_gerencia' form-name='form-save-gerencia-autor'>Cadastrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Adicionar Editora -->
+<div class="modal fade" id="modalCadastrarEditora" tabindex="-1" role="dialog" aria-labelledby="modalEditora" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalEdiora">Cadastrar Editora</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="ui styled sixteen fluid wide">
+                    <div class="ui form form-gerencia-editora form-save-gerencia-editora">
+                        <div class="field">
+                            <input type="hidden"  class="id_item_gerencia">
+                            <label class="ui label ontobooks_color indice-1" data-indice = "1" tabindex="4">Nome do Editora</label>
+                            <input class="editora_gerencia-nome" placeholder="Nome" data-required='required' name="nome" type="text" value="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="ui red direita button" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="ui green direita save_gerencia button" data-controller='editora_gerencia' form-name='form-save-gerencia-editora'>Cadastrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Adicionar Área -->
+<div class="modal fade" id="modalCadastrarArea" tabindex="-1" role="dialog" aria-labelledby="modalArea" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalArea">Cadastrar Área</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="ui styled sixteen fluid wide">
+                    <div class="ui form form-gerencia-area form-save-gerencia-area">
+                        <div class="field">
+                            <input type="hidden"  class="id_item_gerencia">
+                            <label class="ui label ontobooks_color indice-1" data-indice = "1" tabindex="4">Nome da Área</label>
+                            <input class="area_gerencia-nome" placeholder="Área" data-required='required' name="nome" type="text" value="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="ui red button" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="ui green save_gerencia button" data-controller='area_gerencia' form-name='form-save-gerencia-area'>Cadastrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <h1 class="titulo_gerencia">Livros</h1>
 
 <div class="ui styled sixteen fluid wide accordion novo_gerencia">
@@ -20,87 +109,46 @@ $controller ='livros_gerencia';
         </button>
     </div>
     <div class="content">
-        <div class="ui mini form form-gerencia-<? echo $controller ?>">
-            <div class="ui stackable fields grid sixteen wide   form-save-gerencia">
-                <input type="hidden"  class="id_item_gerencia">
-                <div class="ui column eight wide">
-                    <div class="ui stackable fields grid sixteen wide">
-                        <div class="ui field sixteen wide  mini ">
-                            <div class=" sixteen wide  ui input labeled indice-1" data-indice = "1" tabindex="4">
-                                <div class='ui label ontobooks_color grande'>Título</div>
-                                <input class="ui sixteen wide labeled <? echo $controller ?>-titulo" placeholder="Título" data-required='required' name="titulo" type="text" value="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ui stackable fields grid sixteen wide">
-                        <div class="ui field sixteen wide  mini ">
-                            <div class=" sixteen wide  ui input labeled indice-1" data-indice = "1" tabindex="4">
-                                <div class='ui label ontobooks_color grande'>Autor</div>
-                                <div class="ui fluid search selection dropdown  labeled <? echo $controller ?>-autor indice-1" tabindex="0" data-controller = "<? echo $controller ?>" data-indice="1">
-                                    <input type="hidden" data-required="required" tabindex="1" name="id_autor">
-                                    <i class="dropdown icon"></i>
-                                    <div class="default text">Selecione o Autor</div>
-                                    <div  style="width: 400px !important; padding-bottom: 5px;" class="menu form-autor-<? echo $controller ?> indice-1" data-controller = "<? echo $controller ?>">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ui stackable fields grid sixteen wide">
-                        <!-- <div class="ui field eight wide  mini ">
-                            <div class=" sixteen wide  ui input labeled indice-1" data-indice = "1" tabindex="4">
-                                <div class='ui label ontobooks_color grande'>Nº de Páginas</div>
-                                <input class="ui sixteen wide labeled <? echo $controller ?>-paginas" data-required='required' placeholder="Nº de Páginas"  name="paginas" type="number" value="">
-                            </div>
-                        </div> -->
-                        <div class="ui field eight wide  mini ">
-                            <div class=" sixteen wide  ui input labeled " tabindex="4">
-                                <div class='ui label ontobooks_color grande'>Edição</div>
-                                <input class="ui sixteen wide labeled <? echo $controller ?>-edicao" data-required='required' placeholder="Edição"  name="edicao" type="number" value="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ui stackable fields grid sixteen wide  ">
-                        <div class="eight wide field  ui input labeled indice-1"  data-indice = "1">
-                            <div class='ui label ontobooks_color grande'>Editora</div>
-                            <div class="ui fluid search selection dropdown  labeled <? echo $controller ?>-editora indice-1" tabindex="0" data-controller = "<? echo $controller ?>" data-indice="1">
-                                <input type="hidden" data-required="required" tabindex="1" name="id_editora">
-                                <i class="dropdown icon"></i>
-                                <div class="default text">Selecione a Editora</div>
-                                <div  style="width: 400px !important; padding-bottom: 5px;" class="menu form-editora-<? echo $controller ?> indice-1" data-controller = "<? echo $controller ?>">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ui stackable fields grid sixteen wide  ">
-                        <div class="eight wide field  ui input labeled indice-1"  data-indice = "1">
-                            <div class='ui label ontobooks_color grande'>Área</div>
-                            <div class="ui fluid search selection dropdown  labeled <? echo $controller ?>-area indice-1" tabindex="0" data-controller = "<? echo $controller ?>" data-indice="1">
-                                <input type="hidden" data-required="required" tabindex="1" name="id_area">
-                                <i class="dropdown icon"></i>
-                                <div class="default text">Selecione a Área</div>
-                                <div  style="width: 400px !important; padding-bottom: 5px;" class="menu form-area-<? echo $controller ?> indice-1" data-controller = "<? echo $controller ?>">
-                                </div>
-                            </div>
+        <div class="ui equal width form form-gerencia-<? echo $controller ?> form-save-gerencia">
+            <div class="fields" >
+                <div class="field">
+                    <input type="hidden"  class="id_item_gerencia">
+                    <label class="ui label ontobooks_color">Título</label>
+                    <input class="<? echo $controller ?>-titulo" type="text" placeholder="Título" data-required="required" name="titulo" value="">
+                </div>
+                <div class="field">
+                    <label class="ui label ontobooks_color">Autor <a data-toggle="modal" data-target="#modalCadastrarAutor"><span class="ml-4 small">(Adicionar)</span></a></label>
+                    <div class="ui search selection dropdown <? echo $controller ?>-autor indice-1" tabindex="0" data-controller = "<? echo $controller ?>" data-indice="1">
+                        <input type="hidden" data-required="required" tabindex="1" name="id_autor">    
+                        <i class="dropdown icon"></i>
+                        <div class="default text">Selecione o Autor</div>
+                        <div class="menu form-autor-<? echo $controller ?> indice-1" data-controller = "<? echo $controller ?>">
                         </div>
                     </div>
                 </div>
-                <div class="ui column eight wide centered" >
-                    <div class="sixteen wide field  ui centered " style="text-align: center;"  data-indice = "1">
-                        <i class="file image outline huge centered icon icon_image_preview" ></i>
-                        <img class="img_preview" style="max-width: 250; max-height: 300px;">
-                    </div>
-                    <div class="sixteen wide field  ui centered " style="text-align: center; margin-top: 10px;"  data-indice = "1">
-                        <div class="column one wide"  >
-                            <label for="capa_livro_input"
-                                   class="ui grande ontobooks_color label  label_anexo_default" > <i class="attach icon"></i> Anexar Capa</label >
-                            <label style="background-color: red !important;" class="ui grande ontobooks_color label hidden_content  label_remove_anexo_default" >
-                                <i class="remove circle icon"></i> Remover</label >
+            </div>
+            <div class="fields">
+                <div class="field">
+                    <label class="ui label ontobooks_color">Edição</label>
+                    <input class="<? echo $controller ?>-edicao" data-required='required' placeholder="Edição"  name="edicao" type="number" value="">
+                </div>
+                <div class="field">
+                    <label class="ui label ontobooks_color">Editora <a data-toggle="modal" data-target="#modalCadastrarEditora"><span class="ml-4 small">(Adicionar)</span></a></label>
+                    <div class="ui fluid search selection dropdown <? echo $controller ?>-editora indice-1" tabindex="0" data-controller = "<? echo $controller ?>" data-indice="1">
+                        <input type="hidden" data-required="required" tabindex="1" name="id_editora">
+                        <i class="dropdown icon"></i>
+                        <div class="default text">Selecione a Editora</div>
+                        <div class="menu form-editora-<? echo $controller ?> indice-1" data-controller = "<? echo $controller ?>">
                         </div>
-                        <div class="column three wide " style="margin-left:2em; " >
-                            <div  style="position: absolute !important;">
-                                <input accept=".jpg" type="file" class="default_anexo <? echo $controller ?>_capa_anexo"  style="display:none;"  id="capa_livro_input">
-                            </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="ui label ontobooks_color">Área <a data-toggle="modal" data-target="#modalCadastrarArea"><span class="ml-4 small">(Adicionar)</span></a></label>
+                    <div class="ui search selection dropdown <? echo $controller ?>-area indice-1" tabindex="0" data-controller = "<? echo $controller ?>" data-indice="1">
+                        <input type="hidden" data-required="required" tabindex="1" name="id_area">
+                        <i class="dropdown icon"></i>
+                        <div class="default text">Selecione a Área</div>
+                        <div  class="menu form-area-<? echo $controller ?> indice-1" data-controller = "<? echo $controller ?>">
                         </div>
                     </div>
                 </div>
@@ -138,8 +186,8 @@ $controller ='livros_gerencia';
             <td><? echo utf8_encode($livro['edicao']) ?></td>
             <td><? echo utf8_encode($livro['area']) ?></td>
             <td>
-                <i class="fas fa-pencil-alt"></i>
-                <i class="ml-2 fas fa-trash-alt"></i>
+                <i class="fas fa-pencil-alt huge" id="editar"></i>
+                <i class="ml-2 fas fa-trash-alt huge" id="excluir"></i>
             </td>
         </tr>
         <? } ?>

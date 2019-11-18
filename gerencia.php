@@ -88,7 +88,7 @@
                         <div class="col">
                             <a class="nav-link js-scroll-trigger edicao_gerencia" data-controller="autores_gerencia" href="#edicao" style="color: white;">
                                 <div class="gerencia_menu_container">
-                                    <i class="write huge icon ui"></i>
+                                    <i class="keyboard huge icon ui"></i>
                                     <div class="header huge" >Autores</div>
                                 </div>
                             </a>

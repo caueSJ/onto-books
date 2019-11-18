@@ -21,15 +21,13 @@ class livrosDAO {
     //======    START COMPRAS
     public function getLivros($idLivros='') {
         try {
-            $qry = "SELECT l.*,l.titulo as titulo_short, a.nome as autor,lo.descricao as local, e.nome as editora, ar.descricao as area FROM livros l
+            $qry = "SELECT l.*,l.titulo as titulo_short, a.nome as autor, e.nome as editora, ar.descricao as area FROM livros l
             INNER JOIN autores a
             ON a.id_autor = l.id_autor
             INNER JOIN editoras e
             ON e.id_editora = l.id_editora
             INNER JOIN areas ar
-            ON ar.id_area = l.id_area
-            INNER JOIN locais lo
-            ON lo.id_local = l.id_local";
+            ON ar.id_area = l.id_area";
             if($idLivros !=''){
                 $qry.= " WHERE l.id_livro IN ($idLivros)
                 ORDER BY FIELD(l.id_livro,$idLivros) ";

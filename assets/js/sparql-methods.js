@@ -126,10 +126,19 @@ $(document).on("click", ".cancela_save_gerencia", function(event){
     }, 1000);
 });
 
+// Double Click na Lista para Editar
 $(document).on("dblclick", ".edit_item_gerencia", function(event){
 	var controller = $(this).attr('data-controller');
 	editItemGerencia($(this),controller);
 });
+
+// $(document).on("click", ".editar", function(event){
+// 	console.log("Opa");
+// 	var controller = $(this).attr('data-controller');
+// 	editItemGerencia($(this),controller);
+// });
+
+
 $(document).on("click", ".remove_termo_livro", function(event){
 	var controller = $(this).attr('data-controller');
 	var item = $(this).attr('data-value');
@@ -916,19 +925,19 @@ function getListaSemanticCallBack(controller, indice, action, formName,variaveis
 		case 'livros_gerencia':
 			switch(action){
 				case 'get_autores':
-					$('.ui.dropdown.'+controller+'-autor').dropdown({fullTextSearch:true});
+					$('.ui.dropdown.'+controller+'-autor').dropdown({fullTextSearch:true,message:{noResults: 'Autor não encontrado, cadastre na opção acima.'}});
 					if(variaveis.id){
 						$('.ui.dropdown.'+controller+'-autor').dropdown('set selected',variaveis.id);
 					}
 					break;
 				case 'get_editoras':
-					$('.ui.dropdown.'+controller+'-editora').dropdown({fullTextSearch:true});
+					$('.ui.dropdown.'+controller+'-editora').dropdown({fullTextSearch:true,message:{noResults: 'Editora não encontrada, cadastre na opção acima.'}});
 					if(variaveis.id){
 						$('.ui.dropdown.'+controller+'-editora').dropdown('set selected',variaveis.id);
 					}
 					break;
 				case 'get_areas':
-					$('.ui.dropdown.'+controller+'-area').dropdown({fullTextSearch:true});
+					$('.ui.dropdown.'+controller+'-area').dropdown({fullTextSearch:true,message:{noResults: 'Área não encontrada, cadastre na opção acima.'}});
 					if(variaveis.id){
 						$('.ui.dropdown.'+controller+'-area').dropdown('set selected',variaveis.id);
 					}
