@@ -35,7 +35,7 @@ $controller ='livros_gerencia';
             </div>
             <div class="modal-footer">
                 <button type="button" class="ui red direita button" data-dismiss="modal">Cancelar</button>
-                <button type="button" class="ui green direita save_gerencia button" data-controller='autores_gerencia' form-name='form-save-gerencia-autor'>Cadastrar</button>
+                <button type="button" class="ui green direita save_gerencia_modal button" data-controller='autores_gerencia' form-name='form-save-gerencia-autor'>Cadastrar</button>
             </div>
         </div>
     </div>
@@ -64,7 +64,7 @@ $controller ='livros_gerencia';
             </div>
             <div class="modal-footer">
                 <button type="button" class="ui red direita button" data-dismiss="modal">Cancelar</button>
-                <button type="button" class="ui green direita save_gerencia button" data-controller='editora_gerencia' form-name='form-save-gerencia-editora'>Cadastrar</button>
+                <button type="button" class="ui green direita save_gerencia_modal button" data-controller='editoras_gerencia' form-name='form-save-gerencia-editora'>Cadastrar</button>
             </div>
         </div>
     </div>
@@ -87,14 +87,14 @@ $controller ='livros_gerencia';
                         <div class="field">
                             <input type="hidden"  class="id_item_gerencia">
                             <label class="ui label ontobooks_color indice-1" data-indice = "1" tabindex="4">Nome da Área</label>
-                            <input class="area_gerencia-nome" placeholder="Área" data-required='required' name="nome" type="text" value="">
+                            <input class="area_gerencia-nome" placeholder="Área" data-required='required' name="descricao" type="text" value="">
                         </div>
                     </div>
                 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="ui red button" data-dismiss="modal">Cancelar</button>
-                <button type="button" class="ui green save_gerencia button" data-controller='area_gerencia' form-name='form-save-gerencia-area'>Cadastrar</button>
+                <button type="button" class="ui green save_gerencia_modal button" data-controller='areas_gerencia' form-name='form-save-gerencia-area'>Cadastrar</button>
             </div>
         </div>
     </div>
@@ -104,7 +104,7 @@ $controller ='livros_gerencia';
 
 <div class="ui styled sixteen fluid wide accordion novo_gerencia">
     <div class=" title">
-        <button type="button" class="mb-3 btn btn-primary">
+        <button type="button" class="mb-3 btn btn-primary" id="botaoAdicionarLivro">
             Adicionar Livro
         </button>
     </div>
@@ -118,7 +118,7 @@ $controller ='livros_gerencia';
                 </div>
                 <div class="field">
                     <label class="ui label ontobooks_color">Autor <a data-toggle="modal" data-target="#modalCadastrarAutor"><span class="ml-4 small">(Adicionar)</span></a></label>
-                    <div class="ui search selection dropdown <? echo $controller ?>-autor indice-1" tabindex="0" data-controller = "<? echo $controller ?>" data-indice="1">
+                    <div style="font-family: Lato;" class="ui search selection dropdown <? echo $controller ?>-autor indice-1" tabindex="0" data-controller = "<? echo $controller ?>" data-indice="1">
                         <input type="hidden" data-required="required" tabindex="1" name="id_autor">    
                         <i class="dropdown icon"></i>
                         <div class="default text">Selecione o Autor</div>
@@ -134,7 +134,7 @@ $controller ='livros_gerencia';
                 </div>
                 <div class="field">
                     <label class="ui label ontobooks_color">Editora <a data-toggle="modal" data-target="#modalCadastrarEditora"><span class="ml-4 small">(Adicionar)</span></a></label>
-                    <div class="ui fluid search selection dropdown <? echo $controller ?>-editora indice-1" tabindex="0" data-controller = "<? echo $controller ?>" data-indice="1">
+                    <div style="font-family: Lato;" class="ui fluid search selection dropdown <? echo $controller ?>-editora indice-1" tabindex="0" data-controller = "<? echo $controller ?>" data-indice="1">
                         <input type="hidden" data-required="required" tabindex="1" name="id_editora">
                         <i class="dropdown icon"></i>
                         <div class="default text">Selecione a Editora</div>
@@ -144,7 +144,7 @@ $controller ='livros_gerencia';
                 </div>
                 <div class="field">
                     <label class="ui label ontobooks_color">Área <a data-toggle="modal" data-target="#modalCadastrarArea"><span class="ml-4 small">(Adicionar)</span></a></label>
-                    <div class="ui search selection dropdown <? echo $controller ?>-area indice-1" tabindex="0" data-controller = "<? echo $controller ?>" data-indice="1">
+                    <div style="font-family: Lato;" class="ui search selection dropdown <? echo $controller ?>-area indice-1" tabindex="0" data-controller = "<? echo $controller ?>" data-indice="1">
                         <input type="hidden" data-required="required" tabindex="1" name="id_area">
                         <i class="dropdown icon"></i>
                         <div class="default text">Selecione a Área</div>
@@ -169,7 +169,7 @@ $controller ='livros_gerencia';
             <th scope="col">Editora</th>
             <th scope="col">Edição</th>
             <th scope="col">Área</th>
-            <th scope="col">Ações</th>
+            <th scope="col" >Ações</th>
         </tr>
     </thead>
     <tbody>
@@ -186,8 +186,8 @@ $controller ='livros_gerencia';
             <td><? echo utf8_encode($livro['edicao']) ?></td>
             <td><? echo utf8_encode($livro['area']) ?></td>
             <td>
-                <i class="fas fa-pencil-alt huge" id="editar"></i>
-                <i class="ml-2 fas fa-trash-alt huge" id="excluir"></i>
+                <button class="ui button mini orange" data-controller="livros_gerencia" id="editar" title="Editar"><i class="fas fa-pencil-alt"></i></button>
+                <button class="ui button mini mt-1 orange" data-controller="livros_gerencia" id="excluir" title="Excluir"><i class="fas fa-trash-alt"></i></button>
             </td>
         </tr>
         <? } ?>

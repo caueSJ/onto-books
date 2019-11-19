@@ -18,7 +18,6 @@ if(file_exists('config/db/config.php')){
 
 class livrosDAO {
 
-    //======    START COMPRAS
     public function getLivros($idLivros='') {
         try {
             $qry = "SELECT l.*,l.titulo as titulo_short, a.nome as autor, e.nome as editora, ar.descricao as area FROM livros l
@@ -29,10 +28,9 @@ class livrosDAO {
             INNER JOIN areas ar
             ON ar.id_area = l.id_area";
             if($idLivros !=''){
-                $qry.= " WHERE l.id_livro IN ($idLivros)
-                ORDER BY FIELD(l.id_livro,$idLivros) ";
+                $qry.= " WHERE l.id_livro IN ($idLivros) AND deletado = 0 ORDER BY FIELD(l.id_livro,$idLivros) ";
             }else{
-                $qry.= " ORDER BY l.titulo ";
+                $qry.= " WHERE deletado = 0 ORDER BY l.titulo ";
             }
             $db = new dbConn();
             $result = $db->query($qry);
@@ -90,6 +88,24 @@ class livrosDAO {
             return $e->getMessage();
         }
     }
+    
+    public function delLivro($idLivro) {
+        try {
+            $db = new dbConn();
+            //$db->mysqli()->begin_transaction();
+            $qry = "UPDATE livros SET deletado = 1 WHERE id_livro = $idLivro ";
+            $erro = false;
+            //if($db->delete('livros', ' WHERE id_livro = ' . $idLivro) == 0) $erro = true;
+            if($db->query($qry) == 0) $erro = true;
+            if($erro){
+                return false;
+            }else{
+                return true;
+            }
+        } catch (mysqli_sql_exception $e) {
+            return $e->getMessage();
+        }
+    }
 
     public function getTermosLivros() {
         try {
@@ -117,7 +133,7 @@ class livrosDAO {
     public function getAutores($id='') {
         try {
             $qry = "SELECT id_autor as id, nome as text FROM autores ";
-            if($id !=''){
+            if($id !='' ){
                 $qry .= "  WHERE id_autor = $id ";
             }
             $db = new dbConn();
@@ -257,6 +273,7 @@ class livrosDAO {
             return $e->getMessage();
         }
     }
+
     public function saveEditoras($form) {
         try {
             $db = new dbConn();

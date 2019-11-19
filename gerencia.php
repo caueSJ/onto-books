@@ -124,13 +124,11 @@
     </header>
     
     <section class="hidden_content" style="min-height: 100%;" id="edicao">
-        <div class="container-fluid">
             <div class="edicao_gerencia_container hidden_content" style="padding: 10px; margin: 15px;"></div>
             <div class="loding_edicao_container" style=" height: 1px;">
                 <i class="notched circle loading huge icon"></i>
                 <!-- <div  style="text-align: center;margin-top: 20px;font-size: 30px; color:white;">Carregando...</div> -->
             </div>
-        </div>
     </section>
 
     <section id="sobre">

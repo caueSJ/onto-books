@@ -47,6 +47,13 @@ $(document).on("click", ".save_gerencia", function(event){
 	var formName = $(this).attr('form-name');
 	formSaveDefault(controller,formName);
 });
+
+$(document).on("click", ".save_gerencia_modal", function(event){
+	var controller = $(this).attr('data-controller');
+	var formName = $(this).attr('form-name');
+	formSaveDefault(controller,formName, true);
+});
+
 $(document).on("click", ".visualizar_senha", function(event){
 	var controller = $(this).attr('data-controller');
 	if($(this).hasClass('lock')){
@@ -126,18 +133,15 @@ $(document).on("click", ".cancela_save_gerencia", function(event){
     }, 1000);
 });
 
-// Double Click na Lista para Editar
-$(document).on("dblclick", ".edit_item_gerencia", function(event){
-	var controller = $(this).attr('data-controller');
-	editItemGerencia($(this),controller);
+$(document).on("click", "#editar", function(event){
+	var controller = $(this).parent().parent().attr('data-controller');
+	editItemGerencia($(this).parent().parent(),controller);
 });
 
-// $(document).on("click", ".editar", function(event){
-// 	console.log("Opa");
-// 	var controller = $(this).attr('data-controller');
-// 	editItemGerencia($(this),controller);
-// });
-
+$(document).on("click", "#excluir", function(event){
+	var controller = $(this).parent().parent().attr('data-controller');
+	deleteItemGerencia($(this).parent().parent(),controller);
+});
 
 $(document).on("click", ".remove_termo_livro", function(event){
 	var controller = $(this).attr('data-controller');
@@ -430,13 +434,14 @@ function showDefaultModal(messageController,variaveis={},parametrosMsg={}, modal
 function modalResponseCallback(messageController, response, variaveis){
 	}
 
-function defaultAJAX(controller,action, variaveis={}, dataType ='JSON',fd = new FormData()){
-    fd.append('action', action);
+function defaultAJAX(controller,action, variaveis={}, dataType ='JSON',fd = new FormData(), modal = false){
+	fd.append('action', action);
+	fd.append('modal', modal);
     for(var key in variaveis){
         if(variaveis.hasOwnProperty(key)){
             fd.append(key, variaveis[key]);
         }
-    }
+	}
 	$.ajax({
 		url: 'controller/'+controller+'Controller.php',
 		type: 'POST',
@@ -448,12 +453,15 @@ function defaultAJAX(controller,action, variaveis={}, dataType ='JSON',fd = new 
 	})
 	.done(function(data) {
 		console.log(data);
-		defaultAJAXCallback(controller,action,data,variaveis);
+		if (modal) {
+			defaultAJAXCallback(controller,'save_modal',data,variaveis);
+		} else {
+			defaultAJAXCallback(controller,action,data,variaveis);
+		}
 	})
 	.fail(function(data) {
 		console.log("fail DEFAULT AJAX:"+controller+' Action:'+action+ ' DATA: '+JSON.stringify(data));
 		defaultAJAXCallback(controller,action,false,variaveis);
-
 	})
 	.always(function() {
 		console.log("complete DEFAULT AJAX: "+ controller);
@@ -519,6 +527,19 @@ function defaultAJAXCallback(controller, action, data, variaveis){
 						semanticAlert('Erro ao editar livro!', '',3, 'danger');
 					}
 					break;
+				case 'del_livro' :
+					if(data){
+						$('.edicao_gerencia_container').html('');
+						$('.loding_edicao_container').removeClass('hidden_content');
+						$("#edicao").removeClass('hidden_content');
+						setTimeout(function(){
+							appendDefault('gerenciaModels/livros_gerencia', 'edicao_gerencia_container');
+						}, 1000);
+						semanticAlert('Livro excluido com sucesso!', '',3, 'success');
+					}else{
+						semanticAlert('Não foi possível excluir o livro!', '',3, 'danger');
+					}
+					break;
 			}
 			break;
 		case 'autores_gerencia':
@@ -534,6 +555,15 @@ function defaultAJAXCallback(controller, action, data, variaveis){
 					    semanticAlert('Autor registrado com sucesso!', '',3, 'success');
 					}else{
 						semanticAlert('Não foi possível salvar!', '',3, 'danger');
+					}
+					break;
+				case 'save_modal': //Retorno do Salvar Autor pelo Modal
+					if(data){
+						$(':button.close').click().click();
+                        semanticAlert('Autor registrado com sucesso!', '',3, 'success');
+                        getListaSemantic('livros_gerencia', 1, 'get_autores', 'form-autor','');
+					}else{
+						semanticAlert('Não foi possível cadastrar autor!', '',3, 'danger');
 					}
 					break;
 				case 'get_autores':
@@ -567,6 +597,15 @@ function defaultAJAXCallback(controller, action, data, variaveis){
 						semanticAlert('Não foi possível salvar!', '',3, 'danger');
 					}
 					break;
+				case 'save_modal': // Retorno do Salvar Editora pelo Modal
+					if(data){
+                        $(':button.close').click().click();
+                        semanticAlert('Editora registrada com sucesso!', '',3, 'success');
+                        getListaSemantic('livros_gerencia', 1, 'get_editoras', 'form-editora','');
+					}else{
+						semanticAlert('Não foi possível cadastrar editora!', '',3, 'danger');
+					}
+					break;
 				case 'get_editoras':
 					if(data){
 						var editora = data[0];
@@ -596,6 +635,15 @@ function defaultAJAXCallback(controller, action, data, variaveis){
 					    semanticAlert('Área registrada com sucesso!', '',3, 'success');
 					}else{
 						semanticAlert('Não foi possível salvar!', '',3, 'danger');
+					}
+					break;
+				case 'save_modal':
+					if(data){
+                        $(':button.close').click().click();
+                        semanticAlert('Área registrada com sucesso!', '',3, 'success');
+                        getListaSemantic('livros_gerencia', 1, 'get_areas', 'form-area','');
+					}else{
+						semanticAlert('Não foi possível cadastrar área!', '',3, 'danger');
 					}
 					break;
 				case 'get_areas':
@@ -857,7 +905,7 @@ function initiateDataTable(element, coluna =0, cardinal = 'asc', length = 10){
 }
 
 function getListaSemantic(controller, indice, action, form, id=0,variaveis={}){ //Generico para qualquer lista
-	//console.log("TIIIPO>"+id);
+    //console.log("TIIIPO>"+id);
 	var fd = new FormData();
 
     for(var key in variaveis){
@@ -894,13 +942,11 @@ function getListaSemantic(controller, indice, action, form, id=0,variaveis={}){ 
 					html += "</div>";
 					options.append(html);
 				}
-				//console.log(' itens para:'+form);
 				if (this.disabled) {
 					if (this.disabled == 1) {
 						$(".item-"+controller+"-"+this.id).addClass('disabled');
 					}
 				}
-
 			});
 
 			getListaSemanticCallBack(controller, indice, action, form,variaveis,data);
@@ -986,7 +1032,7 @@ function readURL(input) {
     }
 }
 
-function formSaveDefault(controller,formName){
+function formSaveDefault(controller,formName, modal = false){
 	if(formValidateDefault(controller, formName)){
 		var form = $('.'+formName).find("select, input, textarea").serialize();
 		var anexo = $('.default_anexo');
@@ -997,8 +1043,8 @@ function formSaveDefault(controller,formName){
 				fd.append("anexo_gerencia", anexo[0].files[0]);
 			}
 		});
-		console.log("FORM  :"+form+'     . ');
-		defaultAJAX(controller,'save', {}, 'JSON',fd);
+		console.log("FORM: "+form+' .');
+		defaultAJAX(controller,'save', {}, 'JSON',fd, modal);
 	}
 }
 
@@ -1022,6 +1068,15 @@ function  formValidateDefault(controller, formName){
 		return false;
 	}else{
 		return true;
+	}
+}
+
+function deleteItemGerencia(el,controller){
+	switch(controller){
+		case 'livros_gerencia':
+			var id= el.attr('data-item');
+			defaultAJAX('livros_gerencia', 'del_livro', {id:id});
+			break;
 	}
 }
 
@@ -1062,6 +1117,8 @@ function editItemGerencia(el,controller){
 
 	}
 }
+
+
 function buscarEdicaoGerencia(controller){
 	$('.loding_edicao_container').removeClass('hidden_content');
 	$("#edicao").removeClass('hidden_content');

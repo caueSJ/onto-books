@@ -118,13 +118,11 @@ if (!class_exists('dbConn')):
         
         // FREE QUERY EXECUTE
 		public function query($query) {
-                    try {
-                        return $this->db_connect->query($query);
-                    } catch (mysqli_sql_exception $e) {
-                        return $e->errorMessage();
-                    }
-
-                    
+			try {
+				return $this->db_connect->query($query);
+			} catch (mysqli_sql_exception $e) {
+				return $e->errorMessage();
+			}                    
 		}
         
         // LIST TABLES

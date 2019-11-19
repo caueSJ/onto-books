@@ -11,16 +11,21 @@ if(file_exists('dao/livrosDAO.php')){
 
 switch ($_POST['action']) {
     case 'save':
-        $_post = $_POST['form'];        
+        $_post = $_POST['form'];
         parse_str($_post, $form);
         $dao = new livrosDAO();
-        echo json_encode($dao->saveLivros($form));        
+        echo json_encode($dao->saveLivros($form));
         break;
     case 'get_livro':
         $id = $_POST['id'];
         $dao = new livrosDAO();
         $result = $dao->getLivros($id);
-        echo json_encode($dao->utf8_encode_deep($result));        
+        echo json_encode($dao->utf8_encode_deep($result));
+        break;
+    case 'del_livro':
+        $id = $_POST['id'];
+        $dao = new livrosDAO();
+        echo json_encode($dao->delLivro($id));
         break;
     case 'get_autores':
         $dao = new livrosDAO();
