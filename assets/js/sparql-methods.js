@@ -315,10 +315,10 @@ function appendDefaultCallBack(formName, container, variaveis){
 			getListaSemantic('livros_gerencia', 1, 'get_autores', 'form-autor');
 			getListaSemantic('livros_gerencia', 1, 'get_editoras', 'form-editora');
 			getListaSemantic('livros_gerencia', 1, 'get_areas', 'form-area');
-			getListaSemantic('livros_gerencia', 1, 'get_locais', 'form-local');
+			//getListaSemantic('livros_gerencia', 1, 'get_locais', 'form-local');
 			break;
 		case 'gerenciaModels/locais_gerencia':
-			initiateDataTable($('#lista_gerencia'));
+			initiateDataTable($('#lista_gerencia'),1);
 			$('.ui.accordion').accordion({'onChange':function(){
 				$('.novo_gerencia').toggleClass('bordas');
 				}
@@ -872,11 +872,12 @@ function doScrolling(element, duration) {
 }
 
 
-function initiateDataTable(element, coluna =0, cardinal = 'asc', length = 10){
-	element.DataTable({
+function initiateDataTable(element, coluna = 0, cardinal = 'asc', length = 10){
+    let colunaFinal = $('#lista_gerencia th').length - 1;
+    element.DataTable({
 				responsive: true,
-				aaSorting: [[coluna, cardinal]],
-				columnDefs: [{ targets: 6, orderable: false }],
+                aaSorting: [[coluna, cardinal]],
+                columnDefs: [{ targets: colunaFinal, orderable: false }],
 				pageLength: length,
 				"language":{
 				    "sEmptyTable": "Nenhum registro encontrado",
