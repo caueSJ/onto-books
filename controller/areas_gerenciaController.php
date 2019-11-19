@@ -22,6 +22,11 @@ switch ($_POST['action']) {
         $result = $dao->getAreas($id);
         echo json_encode($dao->utf8_encode_deep($result));
         break;
+    case 'del_area':
+        $id = $_POST['id'];
+        $dao = new livrosDAO();
+        echo json_encode($dao->delArea($id));
+        break;
     default:
         # code...
         break;

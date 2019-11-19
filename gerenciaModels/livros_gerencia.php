@@ -99,6 +99,7 @@ $controller ='livros_gerencia';
         </div>
     </div>
 </div>
+<!-- FIM MODAIS -->
 
 <h1 class="titulo_gerencia">Livros</h1>
 

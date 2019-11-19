@@ -30,7 +30,10 @@ class livrosDAO {
             if($idLivros !=''){
                 $qry.= " WHERE l.id_livro IN ($idLivros) AND deletado = 0 ORDER BY FIELD(l.id_livro,$idLivros) ";
             }else{
-                $qry.= " WHERE deletado = 0 ORDER BY l.titulo ";
+                $qry.= " WHERE l.deletado = 0 AND
+                               a.deletado = 0 AND
+                               e.deletado = 0 AND
+                               ar.deletado = 0 ORDER BY l.titulo ";
             }
             $db = new dbConn();
             $result = $db->query($qry);
@@ -107,6 +110,54 @@ class livrosDAO {
         }
     }
 
+    public function delAutor($idAutor) {
+        try {
+            $db = new dbConn();
+            $qry = "UPDATE autores SET deletado = 1 WHERE id_autor = $idAutor";
+            $erro = false;
+            if($db->query($qry) == 0) $erro = true;
+            if($erro){
+                return false;
+            }else{
+                return true;
+            }
+        } catch (mysqli_sql_exception $e) {
+            return $e->getMessage();
+        }
+    }
+
+    public function delEditora($idEditora) {
+        try {
+            $db = new dbConn();
+            $qry = "UPDATE editoras SET deletado = 1 WHERE id_editora = $idEditora";
+            $erro = false;
+            if($db->query($qry) == 0) $erro = true;
+            if($erro){
+                return false;
+            }else{
+                return true;
+            }
+        } catch (mysqli_sql_exception $e) {
+            return $e->getMessage();
+        }
+    }
+
+    public function delArea($idArea) {
+        try {
+            $db = new dbConn();
+            $qry = "UPDATE areas SET deletado = 1 WHERE id_area = $idArea";
+            $erro = false;
+            if($db->query($qry) == 0) $erro = true;
+            if($erro){
+                return false;
+            }else{
+                return true;
+            }
+        } catch (mysqli_sql_exception $e) {
+            return $e->getMessage();
+        }
+    }
+
     public function getTermosLivros() {
         try {
             //            $onto = new Ontologia();
@@ -132,9 +183,9 @@ class livrosDAO {
     }
     public function getAutores($id='') {
         try {
-            $qry = "SELECT id_autor as id, nome as text FROM autores ";
+            $qry = "SELECT id_autor as id, nome as text FROM autores WHERE deletado = 0";
             if($id !='' ){
-                $qry .= "  WHERE id_autor = $id ";
+                $qry .= "  AND id_autor = $id ";
             }
             $db = new dbConn();
             $result = $db->query($qry);
@@ -154,9 +205,9 @@ class livrosDAO {
     }
     public function getEditoras($id='') {
         try {
-            $qry = "SELECT id_editora as id, nome as text FROM editoras ";
+            $qry = "SELECT id_editora as id, nome as text FROM editoras WHERE deletado = 0 ";
             if($id !=''){
-                $qry .= "  WHERE id_editora = $id ";
+                $qry .= "  AND id_editora = $id ";
             }
             $db = new dbConn();
             $result = $db->query($qry);
@@ -522,9 +573,9 @@ class livrosDAO {
     }
     public function getAreas($id='') {
         try {
-            $qry = "SELECT id_area as id, descricao as text FROM areas ";
+            $qry = "SELECT id_area as id, descricao as text FROM areas WHERE deletado = 0";
             if($id !=''){
-                $qry .= "  WHERE id_area = $id ";
+                $qry .= "  AND id_area = $id ";
             }
             $db = new dbConn();
             $result = $db->query($qry);

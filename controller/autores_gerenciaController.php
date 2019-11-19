@@ -22,6 +22,11 @@ switch ($_POST['action']) {
         $result = $dao->getAutores($id);
         echo json_encode($dao->utf8_encode_deep($result));
         break;
+    case 'del_autor':
+        $id = $_POST['id'];
+        $dao = new livrosDAO();
+        echo json_encode($dao->delAutor($id));
+        break;
     default:
         # code...
         break;

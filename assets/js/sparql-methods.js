@@ -56,13 +56,13 @@ $(document).on("click", ".save_gerencia_modal", function(event){
 
 $(document).on("click", ".visualizar_senha", function(event){
 	var controller = $(this).attr('data-controller');
-	if($(this).hasClass('lock')){
-		$(this).removeClass('lock');
-		$(this).addClass('unlock');
+	if($(this).children().hasClass('lock')){
+		$(this).children().removeClass('lock');
+		$(this).children().addClass('unlock');
 		$('.'+controller+'-senha').attr('type','text');
 	}else{
-		$(this).addClass('lock');
-		$(this).removeClass('unlock');
+		$(this).children().addClass('lock');
+		$(this).children().removeClass('unlock');
 		$('.'+controller+'-senha').attr('type','password');
 	}
 });
@@ -580,6 +580,19 @@ function defaultAJAXCallback(controller, action, data, variaveis){
 						semanticAlert('Erro ao editar autor!', '',3, 'danger');
 					}
 					break;
+				case 'del_autor' :
+					if(data){
+						$('.edicao_gerencia_container').html('');
+						$('.loding_edicao_container').removeClass('hidden_content');
+						$("#edicao").removeClass('hidden_content');
+						setTimeout(function(){
+							appendDefault('gerenciaModels/autores_gerencia', 'edicao_gerencia_container');
+						}, 1000);
+						semanticAlert('Autor excluido com sucesso!', '',3, 'success');
+					}else{
+						semanticAlert('Não foi possível excluir o autor!', '',3, 'danger');
+					}
+					break;
 			}
 			break;
 		case 'editoras_gerencia':
@@ -620,6 +633,19 @@ function defaultAJAXCallback(controller, action, data, variaveis){
 						semanticAlert('Erro ao editar editora!', '',3, 'danger');
 					}
 					break;
+				case 'del_editora':
+					if(data){
+						$('.edicao_gerencia_container').html('');
+						$('.loding_edicao_container').removeClass('hidden_content');
+						$("#edicao").removeClass('hidden_content');
+						setTimeout(function(){
+							appendDefault('gerenciaModels/editoras_gerencia', 'edicao_gerencia_container');
+						}, 1000);
+						semanticAlert('Editora excluida com sucesso!', '',3, 'success');
+					}else{
+						semanticAlert('Não foi possível excluir o editora!', '',3, 'danger');
+					}
+					break;
 			}
 			break;
 		case 'areas_gerencia':
@@ -658,6 +684,19 @@ function defaultAJAXCallback(controller, action, data, variaveis){
 						doScrolling("#edicao",1000);
 					}else{
 						semanticAlert('Erro ao editar área!', '',3, 'danger');
+					}
+					break;
+				case 'del_area':
+					if(data){
+						$('.edicao_gerencia_container').html('');
+						$('.loding_edicao_container').removeClass('hidden_content');
+						$("#edicao").removeClass('hidden_content');
+						setTimeout(function(){
+							appendDefault('gerenciaModels/areas_gerencia', 'edicao_gerencia_container');
+						}, 1000);
+						semanticAlert('Área excluida com sucesso!', '',3, 'success');
+					}else{
+						semanticAlert('Não foi possível excluir a área!', '',3, 'danger');
 					}
 					break;
 			}
@@ -1077,6 +1116,18 @@ function deleteItemGerencia(el,controller){
 		case 'livros_gerencia':
 			var id= el.attr('data-item');
 			defaultAJAX('livros_gerencia', 'del_livro', {id:id});
+			break;
+		case 'autores_gerencia':
+			var id = el.attr('data-item');
+			defaultAJAX('autores_gerencia', 'del_autor', {id:id});
+			break;
+		case 'editoras_gerencia':
+			var id = el.attr('data-item');
+			defaultAJAX('editoras_gerencia', 'del_editora', {id:id});
+			break;
+		case 'areas_gerencia':
+			var id = el.attr('data-item');
+			defaultAJAX('areas_gerencia', 'del_area', {id:id});
 			break;
 	}
 }
