@@ -26,21 +26,13 @@ $livros = $dao->getLivros($ids);
                 <div class="meta">
                     <a>Por: <?echo utf8_encode($livro['autor'])?></a>
                 </div>
-                <div class="description locais_livros"
-                     <?if(file_exists('assets/img/locais/'.$livro['id_local'].'.jpg')){?>data-html="<div class='header'>Encontre aqui:</div>
-                    <img width='700px' height='400px' src='assets/img/locais/<? echo $livro['id_local']?>.jpg'>"
-                     <?}?>>
+                <div class="description">
                     Editora: <?echo utf8_encode($livro['editora'])?><br>
                     Assunto: <?echo utf8_encode($livro['area'])?><br>
-                    <i class="map pin icon " ></i>Local: <?echo utf8_encode($livro['local'])?>
                 </div>
                 <div class="ui very relaxed grid" style="font-size: 10px; color: grey;">
                     <div class="ui eight wide column">
                         <?echo $livro['edicao']?> Edição.
-                    </div>
-                    <div class="ui eight wide column">
-                        <i class="book icon"></i>
-                        <?echo $livro['paginas']?> Páginas.
                     </div>
                 </div>
             </div>

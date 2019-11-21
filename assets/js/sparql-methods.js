@@ -51,7 +51,9 @@ $(document).on("click", ".save_gerencia", function(event){
 $(document).on("click", ".save_gerencia_modal", function(event){
 	var controller = $(this).attr('data-controller');
 	var formName = $(this).attr('form-name');
+	var idLivro = $(":input#id_livro").attr('value');
 	formSaveDefault(controller,formName, true);
+	//Começo do fluxo
 });
 
 $(document).on("click", ".visualizar_senha", function(event){
@@ -65,6 +67,50 @@ $(document).on("click", ".visualizar_senha", function(event){
 		$(this).children().removeClass('unlock');
 		$('.'+controller+'-senha').attr('type','password');
 	}
+});
+
+// Upload de arquivo
+$(document).on("change", "#uploadArquivo", function(event){
+	if(event.target.files[0].name.includes('.txt')){
+		form = new FormData();
+		form.append('uploadArquivo', event.target.files[0]);
+		$.ajax({
+            url: 'controller/uploadArquivoController.php',
+            data: form,
+            processData: false,
+			contentType: false,
+            type: 'POST',
+		})
+		.done(function(data) {
+			console.log("ID do livro recem cadastrado: " + data);
+			if(data){
+				console.log("Sucesso ao cadastrar livro => id: " + data);
+				$("#uploadArquivo").val("");
+				$(":input#id_livro")[0].setAttribute('value', data);
+				$(':button#abrirFecharModal')[0].click(); //Sim, é uma gambs, mas eu juro que tentei abrir com js certinho mas não queria funfar :(
+				getListaSemantic('livros_gerencia', 1, 'get_areas', 'form-area','');
+				// Acaba aqui por enquanto
+			} else {
+				console.log("Erro ao cadastrar livro");
+				$("#uploadArquivo").val("");
+				semanticAlert('Erro ao cadastrar livro!', '', 3, 'danger');
+			}
+		})
+		.fail(function() {
+				console.log("Erro ao ler arquivo");
+				$("#uploadArquivo").val("");
+				semanticAlert('Não foi possível ler o arquivo!', '', 3, 'danger');
+		})
+		.always(function() {
+				console.log("Rota de Upload Concluída!");
+				$("#uploadArquivo").val("");
+		});
+	} else {
+		semanticAlert('Formato de arquivo inválido!', '',3, 'warning');
+		$("#uploadArquivo").val("");
+	}
+	
+	//form.append('arquivo', event.target.files[0]); 
 });
 
 $(document).on("keydown", ".search_field", function(event){
@@ -112,10 +158,12 @@ $(document).on("keydown", "body", function(event){
 		$('.search-input').focus();
 	}
 });
-$(document).on("click", ".buscar_button", function(event){
-	$('.search-input').val($('.search_field').val());
-	console.log('teste: '+$('.search_field').val());
-});
+
+// Código não utilizado
+// $(document).on("click", ".buscar_button", function(event){
+// 	$('.search-input').val($('.search_field').val());
+// 	console.log('teste: '+$('.search_field').val());
+// });
 
 $(document).on("click", ".desativa_usuario", function(event){
 	var id = $(this).attr('data-item');
@@ -499,6 +547,14 @@ function defaultAJAXCallback(controller, action, data, variaveis){
 					    semanticAlert('Livro registrado com sucesso!', '',3, 'success');
 					}else{
 						semanticAlert('Não foi possível salvar!', '',3, 'danger');
+					}
+					break;
+				case 'save_modal':
+					if(data){
+						$(':button#abrirFecharModal')[0].click();
+						semanticAlert('Livro importado com sucesso!', '',3, 'success');
+					}else{
+						semanticAlert('Não foi possível importar o livro!', '',3, 'danger');
 					}
 					break;
 				case 'get_livro':

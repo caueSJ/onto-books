@@ -1,4 +1,7 @@
 <?php
+
+use function PHPSTORM_META\type;
+
 if(file_exists('config/db/config.php')){
     require_once 'config/db/config.php';
     require_once 'config/db/mysqli.php';
@@ -27,8 +30,12 @@ class livrosDAO {
             ON e.id_editora = l.id_editora
             INNER JOIN areas ar
             ON ar.id_area = l.id_area";
-            if($idLivros !=''){
-                $qry.= " WHERE l.id_livro IN ($idLivros) AND deletado = 0 ORDER BY FIELD(l.id_livro,$idLivros) ";
+            if($idLivros != ''){
+                $qry.= " WHERE l.id_livro IN ($idLivros) AND
+                         l.deletado = 0 AND
+                         a.deletado = 0 AND
+                         e.deletado = 0 AND
+                         ar.deletado = 0  ORDER BY FIELD(l.id_livro,$idLivros)";
             }else{
                 $qry.= " WHERE l.deletado = 0 AND
                                a.deletado = 0 AND
@@ -53,7 +60,7 @@ class livrosDAO {
     }
     public function buscaLivros($busca, $tipo) {
         try {
-            $busca = str_replace(' ',' +','+'.trim($busca));
+            $busca = str_replace(' ','+','+'.trim($busca));
             $qry = "SELECT l.id_livro FROM livros l
             INNER JOIN autores a
             ON a.id_autor = l.id_autor
@@ -63,16 +70,20 @@ class livrosDAO {
             ON ar.id_area = l.id_area";
             switch ($tipo){
                 case '2':
-                $qry.= " where match(l.titulo) against('$busca' IN BOOLEAN MODE)";
+                $qry.= " WHERE l.deletado = 0 AND a.deletado = 0 AND e.deletado = 0 AND ar.deletado = 0 AND
+                        MATCH(l.titulo) AGAINST('$busca' IN BOOLEAN MODE)";
                 break;
                 case '3':
-                $qry.= " where match(a.nome) against('$busca' IN BOOLEAN MODE)";
+                $qry.= " WHERE l.deletado = 0 AND a.deletado = 0 AND e.deletado = 0 AND ar.deletado = 0 AND
+                        MATCH(a.nome) AGAINST('$busca' IN BOOLEAN MODE)";
                 break;
                 case '4':
-                $qry.= " where match(e.nome) against('$busca' IN BOOLEAN MODE)";
+                $qry.= " WHERE l.deletado = 0 AND a.deletado = 0 AND e.deletado = 0 AND ar.deletado = 0 AND
+                        MATCH(e.nome) AGAINST('$busca' IN BOOLEAN MODE)";
                 break;
                 case '5':
-                $qry.= " where match(ar.descricao) against('$busca' IN BOOLEAN MODE)";
+                $qry.= " WHERE l.deletado = 0 AND a.deletado = 0 AND e.deletado = 0 AND ar.deletado = 0 AND
+                        MATCH(ar.descricao) AGAINST('$busca' IN BOOLEAN MODE)";
                 break;
             }
             $db = new dbConn();
@@ -203,6 +214,85 @@ class livrosDAO {
             return $e->getMessage();
         }
     }
+
+    public function buscaPorNome($nome, $tabela) {
+        try {
+            $db = new dbConn();
+            $result = $db->selectGroup("*", $tabela, "WHERE deletado = 0 AND nome = '$nome'");
+            $i = 0;
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    $r[$i] = $row;
+                    $i++;
+                }
+                // Retorna apenas o ID do autor
+                $db->close();
+                if ($tabela == 'autores') {
+                    return $r[0]['id_autor'];
+                } else {
+                    return $r[0]['id_editora'];
+                }
+                
+            } else {
+                return false;
+            }
+        } catch (mysqli_sql_exception $e) {
+            return $e->getMessage();
+        }
+    }
+
+    public function verificarSeExiste($nome, $tabela) {
+        try {
+            // Verifica se já existe autor cadastrado 
+            $existe = $this->buscaPorNome($nome, $tabela);
+            
+            $db = new dbConn();
+
+            if(!$existe){ // Caso NÃO EXISTA cadastrado, cadastra e devolve o ID
+                $erro = false;
+                
+                $dados = array(
+                    "nome" => $nome
+                );
+
+                $db->insert($tabela, $dados);
+                $id = mysqli_insert_id($db->mysqli());
+                if(!$id) $erro = true;
+                if($erro){
+                    $db->close();
+                    return false;
+                }else{
+                    $db->close();
+                    return $id;
+                }
+            } else { // Caso EXISTA cadastrado, devolve o ID
+                return $existe;
+            }
+        } catch (mysqli_sql_exception $e) {
+            return $e->getMessage();
+        }
+    }
+
+    public function saveLivroUpload($dados) {
+        try {
+            $db = new dbConn();
+            
+            $erro = false;
+            $db->insert('livros', $dados);
+            $id = mysqli_insert_id($db->mysqli());
+            if(!$id) $erro = true;
+            if($erro){
+                $db->close();
+                return false;
+            }else{
+                $db->close();
+                return $id;
+            }
+        } catch (mysqli_sql_exception $e) {
+            return $e->getMessage();
+        }
+    }
+
     public function getEditoras($id='') {
         try {
             $qry = "SELECT id_editora as id, nome as text FROM editoras WHERE deletado = 0 ";
@@ -416,6 +506,7 @@ class livrosDAO {
             return $e->getMessage();
         }
     }
+
     public function saveTermos($form) {
         try {
             $db = new dbConn();

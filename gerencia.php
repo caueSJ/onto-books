@@ -73,7 +73,7 @@
     <header class="masthead" id="gerencia" style="background-image: url('assets/img/fundo-header/<? echo $bg[$i] ?>');" >
         <div class="header-content">
             <div class="header-content-inner">
-                <h1 id="homeHeading">Gerenciar Busador</h1>
+                <h1 id="homeHeading">Gerenciar Buscador</h1>
 
                 <div class="container-fluid mt-5">
                     <div class="row">
@@ -137,17 +137,17 @@
                 <div class="col-lg-8 mx-auto text-center">
                     <h2 class="section-heading">Quer saber mais?</h2>
                     <hr class="primary">
-                    <p>Esta é um projeto em desenvolvimento pelo grupo de pesquisa <a href="">WebSemanTec</a> no Instituto Federal de São Paulo campus São João da Boa Vista, na área de linguística computacional.</p>
+                    <p>Esta é um projeto em desenvolvimento por um grupo de estudo do Instituto Federal de São Paulo (IFSP) campus São João da Boa Vista, na área de linguística computacional.</p>
                 </div>
             </div>
             <div class="row mt-5">
                 <div class="col-lg-4 ml-auto text-center">
                     <i class="fa fa-phone fa-3x sr-contact"></i>
-                    <p>(19) 3634-1100</p>
+                    <p>(19) 3634-1115</p>
                 </div>
                 <div class="col-lg-4 mr-auto text-center">
                     <i class="fas fa-envelope fa-3x sr-contact"></i>
-                    <p><a href="mailto:contato@ifsp.edu.br">contato@ifsp.edu.br</a></p>
+                    <p><a href="mailto:biblioteca_sbv@ifsp.edu.br">biblioteca_sbv@ifsp.edu.br</a></p>
                 </div>
             </div>
         </div>

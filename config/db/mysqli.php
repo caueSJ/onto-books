@@ -5,7 +5,7 @@ if (!class_exists('dbConn')):
     class dbConn {
     
 		private $select, $update, $delete, $result;
-		public $charset = 'ANSI';
+		public $charset = 'UTF8';
          public function mysqli(){
             return $this->db_connect;
         }      

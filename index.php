@@ -30,6 +30,40 @@
 <body id="page-top" data-spy="scroll" data-target="#mainNav">
     <div class="ui fullscreen basic modal base-modal-fullscreen  "></div>
 
+    
+
+    <!-- Modal para adicionar área quando exporta um livro -->
+    <div class="modal" id="modalCadastrarAreaUpload" tabindex="-1" role="dialog" aria-labelledby="modalArea" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalArea">Cadastrar Área de Livro Recém Exportado</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="ui styled sixteen fluid wide">
+                        <div class="ui form form-gerencia-livros form-save-area">
+                            <div class="field">
+                                <div style="font-family: Lato;" class="ui search selection dropdown livros_gerencia-area indice-1" tabindex="0" data-controller = "livros_gerencia" data-indice="1">
+                                    <input hidden="hidden" name="id_livro" value="" id="id_livro">
+                                    <input type="hidden" data-required="required" tabindex="1" name="id_area">
+                                    <i class="dropdown icon"></i>
+                                    <div class="default text">Selecione a Área</div>
+                                    <div  class="menu form-area-livros_gerencia indice-1" data-controller = "livros_gerencia">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="ui green direita save_gerencia_modal button" data-controller='livros_gerencia' form-name='form-save-area'>Cadastrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button data-backdrop="static" data-keyboard="false"  data-toggle="modal" id="abrirFecharModal" data-target="#modalCadastrarAreaUpload" hidden="hidden"></button>    
+
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div class="container">
@@ -76,15 +110,9 @@
             <div class="header-content-inner">
                 <h1 id="homeHeading">Buscador Semântico</h1>
                 <img class="if-logo" width="440em" style="margin-right: 10px;" height="160em" src="assets/img/logo_if.png" alt="Onto Book Logo">
-                <hr>
-                <div class="input-group input-group-lg mb-3" style="flex-wrap:nowrap">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text bg-primary text-white" id="logo-lupa-busca"><i class="fas fa-search"></i></span>
-                    </div>
-                    <input type="text" class="form-control font-weight-bold search_field" placeholder="Digite aqui sua busca" aria-label="Campo de texto para busca" aria-describedby="logo-lupa-busca">
-                </div>
-                <!-- <div class="ui labeled input" style="width: 100%;">
-                    <div class="ui dropdown tipo_busca label">
+                <hr>                
+                <div class="ui labeled input" style="width: 100%;">
+                    <div class="ui dropdown tipo_busca label ontobooks_color">
                         <div class="text">Assunto</div>
                         <i class="dropdown icon"></i>
                         <div class="menu">
@@ -95,15 +123,22 @@
                             <div class="item" data-value="5">Área</div>
                         </div>
                     </div>
-                    <input type="text" class="form-control search_field" placeholder="Digite sua busca">
-                </div> -->
+                    <input type="text" class="search_field" placeholder="Digite sua busca">
+                </div>
                 <a class="btn btn-primary btn-xl js-scroll-trigger buscar_button" style="margin-top: 10px;" href="#resultados">Buscar</a>
-                <a class="btn btn-primary btn-xl importar" style="margin-top: 10px;" >Importar arquivo MARC21</a>
+                <div class="btn btn-primary" style="margin-top: 10px;">
+                    <div class="custom-file">
+                        <span>Upload Arquivo Marc21</span>
+                        <input type="file" class="uploadArquivo" id="uploadArquivo" accept=".txt">
+                    </div>
+                </div>
+                
+                <!-- <a class="btn btn-primary btn-xl importar" style="margin-top: 10px;" >Importar arquivo MARC21</a> -->
             </div>
         </div>
     </header>
 
-    <section class="p-0 hidden_content " style="margin-top: 10px; min-height: 100%;" id="resultados">
+    <section class="hidden_content " style="margin-top: 10px; min-height: 100%;" id="resultados">
         <div class="resultados_container hidden_content" style="padding: 10px;"></div>
         <div class="loding_livros_container" style=" height: 1px;">
             <div class="bookshelf_wrapper">
@@ -134,7 +169,7 @@
                 <div class="icon-search-container" data-ic-class="search-trigger">
                     <div action="#" method="post" class="">
                         <span class="fa fa-search buscar_button" data-ic-class="search-icon"></span>
-                        <input type="text" class="search-input busca_livros" data-ic-class="search-input" placeholder="Search"/>
+                        <input type="text" class="search-input busca_livros" data-ic-class="search-input" placeholder="Buscar"/>
                         <span class="fa fa-times-circle" data-ic-class="search-clear"></span>
                     </div>
                 </div>
@@ -148,17 +183,17 @@
                 <div class="col-lg-8 mx-auto text-center">
                     <h2 class="section-heading">Quer saber mais?</h2>
                     <hr class="primary">
-                    <p>Esta é um projeto em desenvolvimento por um grupo de pesquisa no Instituto Federal de São Paulo campus São João da Boa Vista, na área de linguística computacional.</p>
+                    <p>Esta é um projeto em desenvolvimento por um grupo de estudo do Instituto Federal de São Paulo (IFSP) campus São João da Boa Vista, na área de linguística computacional.</p>
                 </div>
             </div>
-            <div class="row">
+            <div class="row mt-5">
                 <div class="col-lg-4 ml-auto text-center">
                     <i class="fa fa-phone fa-3x sr-contact"></i>
                     <p>(19) 3634-1100</p>
                 </div>
                 <div class="col-lg-4 mr-auto text-center">
-                    <i class="fa fa-envelope-o fa-3x sr-contact"></i>
-                    <p><a href="biblioteca_sbv@ifsp.edu.br">biblioteca_sbv@ifsp.edu.br</a></p>
+                    <i class="fas fa-envelope fa-3x sr-contact"></i>
+                    <p><a href="mailto:biblioteca_sbv@ifsp.edu.br">biblioteca_sbv@ifsp.edu.br</a></p>
                 </div>
             </div>
         </div>

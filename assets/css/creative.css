@@ -36,6 +36,13 @@ html {
   right: 0 !important;
 }
 
+.uploadArquivo {
+  position: absolute; 
+  opacity: 0;
+  right: 0;
+  top: 0;
+}
+
 .ontobooks_color{
   color: white !important;
   background-color: #F05F40 !important;

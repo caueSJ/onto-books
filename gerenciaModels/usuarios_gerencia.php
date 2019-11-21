@@ -28,7 +28,11 @@ $controller ='usuarios_gerencia';
                     <input class="<? echo $controller ?>-nome" placeholder="Nome" data-required='required' name="nome" type="text" value="">
                 </div>
                 <div class="field">
-                <label class="ui label ontobooks_color" data-indice = "1">Senha</label>
+                    <label class="ui label ontobooks_color" data-indice = "1">Usuário</label>
+                    <input class="<? echo $controller ?>-usuario" data-required='required' placeholder="Usuário"  name="login" type="text" value="">
+                </div>
+                <div class="field">
+                    <label class="ui label ontobooks_color" data-indice = "1">Senha</label>
                     <div class="ui action input">
                         <input class="<? echo $controller ?>-senha" data-required='required' placeholder="Senha"  name="senha" type="password" value="">
                         <button class="ui icon button visualizar_senha" data-controller="<?echo $controller?>">
@@ -65,7 +69,7 @@ $controller ='usuarios_gerencia';
                     <td style="color:green">Ativo</td>
                     <td>
                     <button class="ui button mini orange" data-controller="autores_gerencia" id="editar" title="Editar"><i class="fas fa-pencil-alt"></i></button>
-                        <div class='ui vertical animated red desativa_usuario button mini' tabindex='0' data-controller='usuarios_gerencia' data-item="<?echo $usuario['id_usuario']?>">
+                        <div title="Desativar usuário" class='ui vertical animated red desativa_usuario button mini' tabindex='0' data-controller='usuarios_gerencia' data-item="<?echo $usuario['id_usuario']?>">
                             <div class='hidden content'>Desativar</div>
                             <div class='visible content'>
                                 <i class='ban icon'></i>
@@ -76,7 +80,7 @@ $controller ='usuarios_gerencia';
                     <td style="color:red">Inativo</td>
                     <td>
                     <button class="ui button mini orange" data-controller="autores_gerencia" id="editar" title="Editar"><i class="fas fa-pencil-alt"></i></button>
-                        <div class='ui vertical animated green desativa_usuario button mini' tabindex='0' data-controller='usuarios_gerencia' data-item="<?echo $usuario['id_usuario']?>">
+                        <div title="Reativar usuário" class='ui vertical animated green desativa_usuario button mini' tabindex='0' data-controller='usuarios_gerencia' data-item="<?echo $usuario['id_usuario']?>">
                             <div class='hidden content'>Reativar</div>
                             <div class='visible content'>
                                 <i class='undo icon'></i>
