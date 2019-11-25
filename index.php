@@ -37,7 +37,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalArea">Cadastrar Área de Livro Recém Exportado</h5>
+                    <h5 class="modal-title" id="modalArea">Cadastrar Área de Livro Recém Importado</h5>
                 </div>
                 <div class="modal-body">
                     <div class="ui styled sixteen fluid wide">
@@ -128,7 +128,7 @@
                 <a class="btn btn-primary btn-xl js-scroll-trigger buscar_button" style="margin-top: 10px;" href="#resultados">Buscar</a>
                 <div class="btn btn-primary" style="margin-top: 10px;">
                     <div class="custom-file">
-                        <span>Upload Arquivo Marc21</span>
+                        <span>Importar Arquivo Marc21</span>
                         <input type="file" class="uploadArquivo" id="uploadArquivo" accept=".txt">
                     </div>
                 </div>
